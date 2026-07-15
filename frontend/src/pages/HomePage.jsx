@@ -125,7 +125,7 @@ const HomePage = () => {
         <meta name="revisit-after" content="7 days" />
         
         {/* Canonical URL */}
-        <link rel="canonical" href=" " />
+        <link rel="canonical" href="https://apexwebsitesolutions.in/" />
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />

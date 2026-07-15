@@ -19,6 +19,7 @@ import QuotationForm from './components/QuotationForm.jsx';
 import QuotationList from './components/QuotationList.jsx';
 import AboutUsPage from './pages/About.jsx';
 import NotFound from './pages/NotFound';
+import ThankYou from './pages/ThnakYou.jsx';
 
 function App() {
   return (
@@ -49,6 +50,7 @@ function App() {
           
           {/* 404 Page - Must be LAST */}
           <Route path="*" element={<NotFound />} />
+          <Route path="/thank-you" element={<ThankYou />} />
         </Routes>
       </Layout>
     </Router>

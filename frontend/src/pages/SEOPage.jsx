@@ -110,8 +110,8 @@ const SEOPage = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "ApexWeb Solutions",
-    "url": "https://apexwebsitesolutions.netlify.app",
-    "logo": "https://apexwebsitesolutions.netlify.app/logo.png",
+    "url": "https://apexwebsitesolutions.in/",
+    "logo": "https://apexwebsitesolutions.in/logo.png",
     "sameAs": ["https://linkedin.com/company/apexweb", "https://twitter.com/apexweb", "https://facebook.com/apexweb"],
     "contactPoint": { "@type": "ContactPoint", "telephone": "+91- 98906-85066", "contactType": "customer service", "availableLanguage": ["English", "Hindi"] }
   };
@@ -120,9 +120,9 @@ const SEOPage = () => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apexwebsitesolutions.netlify.app" },
-      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://apexwebsitesolutions.netlify.app/services" },
-      { "@type": "ListItem", "position": 3, "name": "SEO Services", "item": "https://apexwebsitesolutions.netlify.app/services/seo" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apexwebsitesolutions.in/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://apexwebsitesolutions.in/services" },
+      { "@type": "ListItem", "position": 3, "name": "SEO Services", "item": "https://apexwebsitesolutions.in/services/seo" }
     ]
   };
 
@@ -144,26 +144,80 @@ const SEOPage = () => {
   return (
     <HelmetProvider>
       <Helmet>
-        <title>SEO Services India | #1 SEO Agency | Rank Higher on Google | ApexWeb Solutions</title>
-        <meta name="description" content="Top-rated SEO agency in India. Get your website ranked on Google's first page. Technical SEO, Local SEO, Link Building. 500+ keywords ranked. Free SEO audit!" />
-        <meta name="keywords" content="SEO services, SEO agency India, search engine optimization, Google ranking, local SEO, technical SEO, link building, on-page SEO, off-page SEO, GMB optimization" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://apexwebsitesolutions.netlify.app/services/seo" />
-        
-        <meta property="og:title" content="SEO Services India | #1 SEO Agency | Rank Higher on Google" />
-        <meta property="og:description" content="Get your website ranked on Google's first page. 500+ keywords ranked, 340% traffic growth. Free SEO audit available!" />
-        <meta property="og:url" content="https://apexwebsitesolutions.netlify.app/services/seo" />
-        <meta property="og:type" content="website" />
-        
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="SEO Services India | Rank Higher on Google" />
-        <meta name="twitter:description" content="Professional SEO services. Get free SEO audit today!" />
-        
-        <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
-      </Helmet>
+    <title>SEO Services | Search Engine Optimization Company | Apex Website Solutions</title>
+
+    <meta
+      name="description"
+      content="Improve your website's visibility with professional SEO services from Apex Website Solutions. We provide technical SEO, on-page SEO, off-page SEO, local SEO, keyword research, and link building to help businesses grow organically."
+    />
+
+    <meta
+      name="keywords"
+      content="SEO services, search engine optimization, SEO company, SEO agency, technical SEO, local SEO services, on-page SEO, off-page SEO, link building services, keyword research, Google Business Profile optimization, ecommerce SEO, WordPress SEO, SEO expert India"
+    />
+
+    <meta name="robots" content="index, follow" />
+
+    <link
+      rel="canonical"
+      href="https://apexwebsitesolutions.in/services/seo"
+    />
+
+    {/* Open Graph */}
+    <meta
+      property="og:title"
+      content="SEO Services | Search Engine Optimization | Apex Website Solutions"
+    />
+
+    <meta
+      property="og:description"
+      content="Professional SEO services including technical SEO, local SEO, on-page SEO, off-page SEO, keyword research, and link building to improve your website's search visibility."
+    />
+
+    <meta
+      property="og:url"
+      content="https://apexwebsitesolutions.in/services/seo"
+    />
+
+    <meta property="og:type" content="website" />
+
+    <meta
+      property="og:site_name"
+      content="Apex Website Solutions"
+    />
+
+    {/* Twitter */}
+    <meta
+      name="twitter:card"
+      content="summary_large_image"
+    />
+
+    <meta
+      name="twitter:title"
+      content="SEO Services | Apex Website Solutions"
+    />
+
+    <meta
+      name="twitter:description"
+      content="Professional SEO services to improve Google rankings, increase organic traffic, and grow your business online."
+    />
+
+    <script type="application/ld+json">
+      {JSON.stringify(organizationSchema)}
+    </script>
+
+    <script type="application/ld+json">
+      {JSON.stringify(breadcrumbSchema)}
+    </script>
+
+    <script type="application/ld+json">
+      {JSON.stringify(faqSchema)}
+    </script>
+
+    <script type="application/ld+json">
+      {JSON.stringify(localBusinessSchema)}
+    </script>
+  </Helmet>
 
       <div className="min-h-screen bg-white pt-32 pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

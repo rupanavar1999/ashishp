@@ -57,20 +57,66 @@ const HeroSection = () => {
 
   return (
     <>
-      <Helmet>
-        <title>ApexWeb Solutions | #1 Digital Agency in India | Web Development, SEO, Marketing</title>
-        <meta name="description" content="India's leading digital agency offering website development, SEO, and digital marketing. 500+ projects delivered. Free consultation available!" />
-        <meta name="keywords" content="digital agency, web development company, website design services, SEO services, digital marketing agency, Google Ads services, social media marketing, WordPress development, Shopify development, UI UX design, ecommerce website development, local SEO services, performance marketing, lead generation, online marketing agency" />
-        <meta property="og:title" content="ApexWeb Solutions - #1 Digital Agency in India" />
-        <meta property="og:description" content="Building digital experiences that generate real business growth. Free consultation available!" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="ApexWeb Solutions - #1 Digital Agency" />
-        <meta name="twitter:description" content="Get a free consultation and grow your business with our expert digital solutions." />
-        <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(localBusinessSchema)}</script>
-      </Helmet>
+   <Helmet>
+  <title>Website Development, SEO & Digital Marketing Services | Apex Website Solutions</title>
+
+  <link rel="canonical" href="https://apexwebsitesolutions.in/" />
+
+  <meta
+    name="description"
+    content="Apex Website Solutions offers professional website development, SEO, Google Ads, social media marketing, WordPress, Shopify, UI/UX design, and digital marketing services to help businesses grow online."
+  />
+
+  <meta
+    name="keywords"
+    content="website development services, website development company, web design services, SEO services, digital marketing agency, Google Ads management, social media marketing services, WordPress development, Shopify development, ecommerce website development, UI UX design, local SEO services, lead generation, online marketing"
+  />
+
+  <meta
+    property="og:title"
+    content="Website Development & Digital Marketing Services | Apex Website Solutions"
+  />
+
+  <meta
+    property="og:description"
+    content="Grow your business with professional website development, SEO, Google Ads, and social media marketing services from Apex Website Solutions."
+  />
+
+  <meta property="og:type" content="website" />
+
+  <meta
+    property="og:url"
+    content="https://apexwebsitesolutions.in/"
+  />
+
+  <meta
+    property="og:site_name"
+    content="Apex Website Solutions"
+  />
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
+
+  <meta
+    name="twitter:title"
+    content="Website Development & Digital Marketing Services | Apex Website Solutions"
+  />
+
+  <meta
+    name="twitter:description"
+    content="Professional website development, SEO, Google Ads and digital marketing services for businesses across India."
+  />
+
+  <script type="application/ld+json">
+    {JSON.stringify(organizationSchema)}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify(localBusinessSchema)}
+  </script>
+</Helmet>
 
       <section className="py-30 relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white to-gray-50">
         {/* Modern Animated Background */}

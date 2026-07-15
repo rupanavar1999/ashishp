@@ -148,8 +148,8 @@ const PerformanceMarketingPage = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "ApexWeb Solutions",
-    "url": "https://apexwebsitesolutions.netlify.app",
-    "logo": "https://apexwebsitesolutions.netlify.app/logo.png",
+    "url": "https://apexwebsitesolutions.in/",
+    "logo": "https://apexwebsitesolutions.in/logo.png",
     "sameAs": ["https://linkedin.com/company/apexweb", "https://twitter.com/apexweb", "https://facebook.com/apexweb"],
     "contactPoint": { "@type": "ContactPoint", "telephone": "+91- 98906-85066", "contactType": "customer service", "availableLanguage": ["English", "Hindi"] }
   };
@@ -158,9 +158,9 @@ const PerformanceMarketingPage = () => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apexwebsitesolutions.netlify.app" },
-      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://apexwebsitesolutions.netlify.app/services" },
-      { "@type": "ListItem", "position": 3, "name": "Performance Marketing", "item": "https://apexwebsitesolutions.netlify.app/services/performance-marketing" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apexwebsitesolutions.in/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://apexwebsitesolutions.in/services" },
+      { "@type": "ListItem", "position": 3, "name": "Performance Marketing", "item": "https://apexwebsitesolutions.in/services/performance-marketing" }
     ]
   };
 
@@ -186,27 +186,81 @@ const PerformanceMarketingPage = () => {
 
   return (
     <HelmetProvider>
-      <Helmet>
-        <title>Performance Marketing Agency | Google & Meta Ads | Starting ₹30,000 | ApexWeb Solutions</title>
-        <meta name="description" content="Top performance marketing agency in India. Google Ads, Meta Ads, LinkedIn Ads management. 12x average ROI, 85% conversion lift. Free ROI analysis!" />
-        <meta name="keywords" content="performance marketing, Google Ads, Meta Ads, LinkedIn Ads, PPC management, paid advertising, ROI marketing, digital advertising, ad spend optimization" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://apexwebsitesolutions.netlify.app/services/performance-marketing" />
-        
-        <meta property="og:title" content="Performance Marketing Agency | Google & Meta Ads | Starting ₹30,000" />
-        <meta property="og:description" content="Drive measurable ROI with our performance marketing services. 12x average ROI guaranteed. Free analysis!" />
-        <meta property="og:url" content="https://apexwebsitesolutions.netlify.app/services/performance-marketing" />
-        <meta property="og:type" content="website" />
-        
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Performance Marketing Agency | Starting ₹30,000" />
-        <meta name="twitter:description" content="Professional performance marketing. Free ROI analysis available!" />
-        
-        <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
-      </Helmet>
+     <Helmet>
+  <title>Performance Marketing Services | Google Ads & Meta Ads Management | Apex Website Solutions</title>
+
+  <meta
+    name="description"
+    content="Grow your business with performance marketing services from Apex Website Solutions. We manage Google Ads, Meta Ads, LinkedIn Ads, and PPC campaigns to generate quality leads and maximize your marketing ROI."
+  />
+
+  <meta
+    name="keywords"
+    content="performance marketing services, performance marketing agency, Google Ads management, Meta Ads management, Facebook Ads services, Instagram Ads services, LinkedIn Ads management, PPC management, paid advertising services, lead generation services, digital advertising agency"
+  />
+
+  <meta name="robots" content="index, follow" />
+
+  <link
+    rel="canonical"
+    href="https://apexwebsitesolutions.in/services/performance-marketing"
+  />
+
+  {/* Open Graph */}
+  <meta
+    property="og:title"
+    content="Performance Marketing Services | Google Ads & Meta Ads | Apex Website Solutions"
+  />
+
+  <meta
+    property="og:description"
+    content="Professional performance marketing services including Google Ads, Meta Ads, LinkedIn Ads, and PPC campaign management to help businesses generate more leads."
+  />
+
+  <meta
+    property="og:url"
+    content="https://apexwebsitesolutions.in/services/performance-marketing"
+  />
+
+  <meta property="og:type" content="website" />
+
+  <meta
+    property="og:site_name"
+    content="Apex Website Solutions"
+  />
+
+  {/* Twitter */}
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
+
+  <meta
+    name="twitter:title"
+    content="Performance Marketing Services | Apex Website Solutions"
+  />
+
+  <meta
+    name="twitter:description"
+    content="Google Ads, Meta Ads, LinkedIn Ads, and PPC management services to grow your business and generate quality leads."
+  />
+
+  <script type="application/ld+json">
+    {JSON.stringify(organizationSchema)}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify(breadcrumbSchema)}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify(faqSchema)}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify(serviceSchema)}
+  </script>
+</Helmet>
 
       <div className="min-h-screen bg-white pt-32 pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

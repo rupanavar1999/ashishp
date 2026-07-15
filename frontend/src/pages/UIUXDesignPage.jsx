@@ -158,8 +158,8 @@ const UIUXDesignPage = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "ApexWeb Solutions",
-    "url": "https://apexwebsitesolutions.netlify.app",
-    "logo": "https://apexwebsitesolutions.netlify.app/logo.png",
+    "url": "https://apexwebsitesolutions.in/",
+    "logo": "https://apexwebsitesolutions.in/logo.png",
     "sameAs": [
       "https://linkedin.com/company/apexweb",
       "https://twitter.com/apexweb",
@@ -183,19 +183,19 @@ const UIUXDesignPage = () => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://apexwebsitesolutions.netlify.app"
+        "item": "https://apexwebsitesolutions.in/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://apexwebsitesolutions.netlify.app/services"
+        "item": "https://apexwebsitesolutions.in/services"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "UI/UX Design",
-        "item": "https://apexwebsitesolutions.netlify.app/services/ui-ux-design"
+        "item": "https://apexwebsitesolutions.in/services/ui-ux-design"
       }
     ]
   };
@@ -215,56 +215,103 @@ const UIUXDesignPage = () => {
 
   return (
     <HelmetProvider>
-      <Helmet>
-        {/* Primary Meta Tags */}
-        <title>UI/UX Design Services | Professional UI UX Design Agency | ApexWeb Solutions</title>
-        <meta name="title" content="UI/UX Design Services | Professional UI UX Design Agency India | ApexWeb Solutions" />
-        <meta name="description" content="Expert UI/UX design services in India. Get user-centered designs that increase conversions by 200%. Free consultation. Figma prototypes. Top-rated agency." />
-        <meta name="keywords" content="UI/UX design, UI design services, UX design agency, user interface design, user experience design, Figma design, prototype design, wireframing, mobile app design, web design, product design, design system, user research, usability testing" />
-        <meta name="author" content="ApexWeb Solutions" />
-        <meta name="robots" content="index, follow" />
-        <meta name="language" content="English" />
-        <meta name="revisit-after" content="7 days" />
-        
-        {/* Canonical URL */}
-        <link rel="canonical" href="https://apexwebsitesolutions.netlify.app/services/ui-ux-design" />
-        
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://apexwebsitesolutions.netlify.app/services/ui-ux-design" />
-        <meta property="og:title" content="UI/UX Design Services | Professional UI UX Design Agency | ApexWeb Solutions" />
-        <meta property="og:description" content="Transform your digital products with our expert UI/UX design services. User-centered designs that drive results. 200% conversion increase guaranteed." />
-        <meta property="og:image" content="https://apexwebsitesolutions.netlify.app/og-uiux-design.jpg" />
-        <meta property="og:site_name" content="ApexWeb Solutions" />
-        <meta property="og:locale" content="en_IN" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://apexwebsitesolutions.netlify.app/services/ui-ux-design" />
-        <meta name="twitter:title" content="UI/UX Design Services | ApexWeb Solutions" />
-        <meta name="twitter:description" content="Professional UI/UX design agency. Get beautiful, user-friendly designs that convert. Free consultation available!" />
-        <meta name="twitter:image" content="https://apexwebsitesolutions.netlify.app/twitter-uiux-design.jpg" />
-        
-        {/* Additional SEO Meta Tags */}
-        <meta name="geo.region" content="IN-GA" />
-        <meta name="geo.placename" content="Panaji" />
-        <meta name="geo.position" content="15.4989;73.8278" />
-        <meta name="ICBM" content="15.4989, 73.8278" />
-        
-        {/* Schema.org markup */}
-        <script type="application/ld+json">
-          {JSON.stringify(organizationSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(breadcrumbSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(servicesSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
-        </script>
-      </Helmet>
+     <Helmet>
+  {/* Primary Meta Tags */}
+  <title>UI/UX Design Services | Web & Mobile UI UX Design | Apex Website Solutions</title>
+
+  <meta
+    name="description"
+    content="Create engaging digital experiences with professional UI/UX design services from Apex Website Solutions. We design user-friendly websites, mobile apps, wireframes, prototypes, and responsive interfaces using modern design principles."
+  />
+
+  <meta
+    name="keywords"
+    content="UI UX design services, UI UX design company, UI design services, UX design services, web UI design, mobile app UI design, Figma design services, wireframing, prototype design, user experience design, responsive UI design, product design, usability testing, design system"
+  />
+
+  <meta name="author" content="Apex Website Solutions" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+
+  {/* Canonical */}
+  <link
+    rel="canonical"
+    href="https://apexwebsitesolutions.in/services/ui-ux-design"
+  />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+
+  <meta
+    property="og:url"
+    content="https://apexwebsitesolutions.in/services/ui-ux-design"
+  />
+
+  <meta
+    property="og:title"
+    content="UI/UX Design Services | Apex Website Solutions"
+  />
+
+  <meta
+    property="og:description"
+    content="Professional UI/UX design services for websites, mobile apps, wireframes, prototypes, and user-friendly digital experiences."
+  />
+
+  <meta
+    property="og:image"
+    content="https://apexwebsitesolutions.in/og-uiux-design.jpg"
+  />
+
+  <meta
+    property="og:site_name"
+    content="Apex Website Solutions"
+  />
+
+  <meta property="og:locale" content="en_IN" />
+
+  {/* Twitter */}
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
+
+  <meta
+    name="twitter:url"
+    content="https://apexwebsitesolutions.in/services/ui-ux-design"
+  />
+
+  <meta
+    name="twitter:title"
+    content="UI/UX Design Services | Apex Website Solutions"
+  />
+
+  <meta
+    name="twitter:description"
+    content="Professional UI/UX design services including web design, mobile app design, wireframing, prototyping, and responsive user interface design."
+  />
+
+  <meta
+    name="twitter:image"
+    content="https://apexwebsitesolutions.in/twitter-uiux-design.jpg"
+  />
+
+  {/* Schema */}
+  <script type="application/ld+json">
+    {JSON.stringify(organizationSchema)}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify(breadcrumbSchema)}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify(servicesSchema)}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify(faqSchema)}
+  </script>
+</Helmet>
 
       <div className="min-h-screen bg-white pt-32 pb-24 overflow-hidden">
         {/* Hero Section */}

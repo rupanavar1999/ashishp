@@ -1,0 +1,7 @@
+# robots.txt for Apex Website Solutions
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://apexwebsitesolutions.in/sitemap.xml

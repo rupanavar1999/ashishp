@@ -139,8 +139,8 @@ const WebsiteMaintenancePage = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "ApexWeb Solutions",
-    "url": "https://apexwebsitesolutions.netlify.app",
-    "logo": "https://apexwebsitesolutions.netlify.app/logo.png",
+    "url": "https://apexwebsitesolutions.in/",
+    "logo": "https://apexwebsitesolutions.in/logo.png",
     "sameAs": ["https://linkedin.com/company/apexweb", "https://twitter.com/apexweb", "https://facebook.com/apexweb"],
     "contactPoint": { "@type": "ContactPoint", "telephone": "+91- 98906-85066", "contactType": "customer service", "availableLanguage": ["English", "Hindi"] }
   };
@@ -149,9 +149,9 @@ const WebsiteMaintenancePage = () => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apexwebsitesolutions.netlify.app" },
-      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://apexwebsitesolutions.netlify.app/services" },
-      { "@type": "ListItem", "position": 3, "name": "Website Maintenance", "item": "https://apexwebsitesolutions.netlify.app/services/website-maintenance" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apexwebsitesolutions.in/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://apexwebsitesolutions.in/services" },
+      { "@type": "ListItem", "position": 3, "name": "Website Maintenance", "item": "https://apexwebsitesolutions.in/services/website-maintenance" }
     ]
   };
 
@@ -173,28 +173,82 @@ const WebsiteMaintenancePage = () => {
 
   return (
     <HelmetProvider>
-      <Helmet>
-        <title>Website Maintenance Services | Starting at ₹5,000/month | ApexWeb Solutions</title>
-        <meta name="description" content="Professional website maintenance starting at just ₹5,000/month. 24/7 security monitoring, daily backups, speed optimization, and 99.9% uptime guarantee. Free audit!" />
-        <meta name="keywords" content="website maintenance, website security, website backup, WordPress maintenance, website care plan, website support, website monitoring, uptime monitoring" />
-        <meta name="robots" content="index, follow" />
-        
-        <link rel="canonical" href="https://apexwebsitesolutions.netlify.app/services/website-maintenance" />
-        
-        <meta property="og:title" content="Website Maintenance Services | Starting at ₹5,000/month" />
-        <meta property="og:description" content="Keep your website secure, fast, and updated with our professional maintenance services. 99.9% uptime guaranteed." />
-        <meta property="og:url" content="https://apexwebsitesolutions.netlify.app/services/website-maintenance" />
-        <meta property="og:type" content="website" />
-        
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Website Maintenance Services | Starting at ₹5,000/month" />
-        <meta name="twitter:description" content="Professional website maintenance. Free audit available!" />
-        
-        <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
-      </Helmet>
+     <Helmet>
+  <title>Website Maintenance Services | WordPress & Website Support | Apex Website Solutions</title>
+
+  <meta
+    name="description"
+    content="Keep your website secure, fast, and up to date with professional website maintenance services from Apex Website Solutions. We provide WordPress maintenance, website security, backups, speed optimization, bug fixes, and ongoing technical support."
+  />
+
+  <meta
+    name="keywords"
+    content="website maintenance services, WordPress maintenance, website support services, website security, website backup services, website updates, speed optimization, website monitoring, website care plans, website bug fixes, website maintenance company"
+  />
+
+  <meta name="author" content="Apex Website Solutions" />
+  <meta name="robots" content="index, follow" />
+
+  <link
+    rel="canonical"
+    href="https://apexwebsitesolutions.in/services/website-maintenance"
+  />
+
+  {/* Open Graph */}
+  <meta
+    property="og:title"
+    content="Website Maintenance Services | Apex Website Solutions"
+  />
+
+  <meta
+    property="og:description"
+    content="Professional website maintenance services including security updates, backups, WordPress maintenance, speed optimization, bug fixes, and technical support."
+  />
+
+  <meta
+    property="og:url"
+    content="https://apexwebsitesolutions.in/services/website-maintenance"
+  />
+
+  <meta property="og:type" content="website" />
+
+  <meta
+    property="og:site_name"
+    content="Apex Website Solutions"
+  />
+
+  {/* Twitter */}
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
+
+  <meta
+    name="twitter:title"
+    content="Website Maintenance Services | Apex Website Solutions"
+  />
+
+  <meta
+    name="twitter:description"
+    content="Professional website maintenance including WordPress updates, backups, website security, performance optimization, and technical support."
+  />
+
+  <script type="application/ld+json">
+    {JSON.stringify(organizationSchema)}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify(breadcrumbSchema)}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify(faqSchema)}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify(serviceSchema)}
+  </script>
+</Helmet>
 
       <div className="min-h-screen bg-white pt-32 pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

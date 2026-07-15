@@ -127,8 +127,8 @@ const GoogleBusinessPage = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "ApexWeb Solutions",
-    "url": "https://apexwebsitesolutions.netlify.app",
-    "logo": "https://apexwebsitesolutions.netlify.app/logo.png",
+    "url": "https://apexwebsitesolutions.in/",
+    "logo": "https://apexwebsitesolutions.in/logo.png",
     "contactPoint": { "@type": "ContactPoint", "telephone": "+91- 98906-85066", "contactType": "customer service" }
   };
 
@@ -136,29 +136,81 @@ const GoogleBusinessPage = () => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apexwebsitesolutions.netlify.app" },
-      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://apexwebsitesolutions.netlify.app/services" },
-      { "@type": "ListItem", "position": 3, "name": "Google Business Profile", "item": "https://apexwebsitesolutions.netlify.app/services/google-business-profile" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apexwebsitesolutions.in/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://apexwebsitesolutions.in/services" },
+      { "@type": "ListItem", "position": 3, "name": "Google Business Profile", "item": "https://apexwebsitesolutions.in/services/google-business-profile" }
     ]
   };
 
   return (
     <HelmetProvider>
-      <Helmet>
-        <title>Google Business Profile Optimization | GMB Services | Starting ₹9,000 | ApexWeb Solutions</title>
-        <meta name="description" content="Professional Google Business Profile optimization services. Get 7x more visibility, dominate local search. Free GMB audit. Starting at ₹9,000/month!" />
-        <meta name="keywords" content="Google Business Profile, GMB optimization, local SEO, Google Maps ranking, Google My Business, local search optimization" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://apexwebsitesolutions.netlify.app/services/google-business-profile" />
-        <meta property="og:title" content="Google Business Profile Optimization | Starting ₹9,000" />
-        <meta property="og:description" content="Dominate local search with our GMB optimization services. Free audit available!" />
-        <meta property="og:url" content="https://apexwebsitesolutions.netlify.app/services/google-business-profile" />
-        <meta property="og:type" content="website" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="GMB Optimization Services | Starting ₹9,000" />
-        <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-      </Helmet>
+   <Helmet>
+  <title>Google Business Profile Optimization Services | Local SEO Experts | Apex Website Solutions</title>
+
+  <meta
+    name="description"
+    content="Improve your local search visibility with Google Business Profile Optimization Services. Apex Website Solutions helps businesses optimize Google Business Profiles, rank higher on Google Maps, and attract more local customers."
+  />
+
+  <meta
+    name="keywords"
+    content="Google Business Profile Optimization, Google Business Profile Services, Google Business Profile Management, Google Business Profile Expert, Google Business Profile SEO, Google Maps SEO, Google Maps Ranking, Local SEO Services, Google Business Profile Agency, Google My Business Optimization"
+  />
+
+  <meta name="robots" content="index, follow" />
+
+  <link
+    rel="canonical"
+    href="https://apexwebsitesolutions.in/services/google-business-profile"
+  />
+
+  {/* Open Graph */}
+  <meta
+    property="og:title"
+    content="Google Business Profile Optimization Services | Apex Website Solutions"
+  />
+
+  <meta
+    property="og:description"
+    content="Boost your local business visibility with professional Google Business Profile optimization and Google Maps SEO services."
+  />
+
+  <meta
+    property="og:url"
+    content="https://apexwebsitesolutions.in/services/google-business-profile"
+  />
+
+  <meta property="og:type" content="website" />
+
+  <meta
+    property="og:site_name"
+    content="Apex Website Solutions"
+  />
+
+  {/* Twitter */}
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
+
+  <meta
+    name="twitter:title"
+    content="Google Business Profile Optimization Services"
+  />
+
+  <meta
+    name="twitter:description"
+    content="Optimize your Google Business Profile, improve Google Maps rankings, and generate more local leads with Apex Website Solutions."
+  />
+
+  <script type="application/ld+json">
+    {JSON.stringify(organizationSchema)}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify(breadcrumbSchema)}
+  </script>
+</Helmet>
 
       <div className="min-h-screen bg-white pt-32 pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

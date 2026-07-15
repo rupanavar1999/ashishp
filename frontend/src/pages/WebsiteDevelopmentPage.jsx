@@ -63,8 +63,8 @@ const WebsiteDevelopmentPage = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "ApexWeb Solutions",
-    "url": "https://apexwebsitesolutions.netlify.app",
-    "logo": "https://apexwebsitesolutions.netlify.app/logo.png",
+    "url": "https://apexwebsitesolutions.in/",
+    "logo": "https://apexwebsitesolutions.in/logo.png",
     "sameAs": ["https://linkedin.com/company/apexweb", "https://twitter.com/apexweb", "https://facebook.com/apexweb"],
     "contactPoint": { "@type": "ContactPoint", "telephone": "+91- 98906-85066", "contactType": "customer service", "availableLanguage": ["English", "Hindi"] }
   };
@@ -73,9 +73,9 @@ const WebsiteDevelopmentPage = () => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apexwebsitesolutions.netlify.app" },
-      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://apexwebsitesolutions.netlify.app/services" },
-      { "@type": "ListItem", "position": 3, "name": "Website Development", "item": "https://apexwebsitesolutions.netlify.app/services/website-development" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apexwebsitesolutions.in/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://apexwebsitesolutions.in/services" },
+      { "@type": "ListItem", "position": 3, "name": "Website Development", "item": "https://apexwebsitesolutions.in/services/website-development" }
     ]
   };
 
@@ -91,26 +91,78 @@ const WebsiteDevelopmentPage = () => {
 
   return (
     <HelmetProvider>
-      <Helmet>
-        <title>Affordable Website Development | Professional Websites Starting at ₹12,000 | ApexWeb Solutions</title>
-        <meta name="description" content="Get a professional, mobile-friendly website starting at just ₹12,000. Fast delivery, SEO-ready, and free support. Trusted by 500+ businesses. Free quote!" />
-        <meta name="keywords" content="affordable website development, cheap website design, professional website, business website, ecommerce website, custom web development, website design India, responsive website" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://apexwebsitesolutions.netlify.app/services/website-development" />
-        
-        <meta property="og:title" content="Affordable Website Development | Professional Websites Starting at ₹12,000" />
-        <meta property="og:description" content="Get a stunning, high-performance website without breaking the bank. Starting at just ₹12,000!" />
-        <meta property="og:url" content="https://apexwebsitesolutions.netlify.app/services/website-development" />
-        <meta property="og:type" content="website" />
-        
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Affordable Website Development | Starting at ₹12,000" />
-        <meta name="twitter:description" content="Professional websites at affordable prices. Get your online presence today!" />
-        
-        <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-      </Helmet>
+   <Helmet>
+  <title>Website Development Services in Mumbai | WordPress & eCommerce | Apex Website Solutions</title>
+
+  <meta
+    name="description"
+    content="Apex Website Solutions offers professional website development services in Mumbai including custom websites, WordPress development, eCommerce websites, responsive web design, and SEO-friendly business websites."
+  />
+
+  <meta
+    name="keywords"
+    content="website development services, website development company, website development Mumbai, website developer Mumbai, custom website development, WordPress website development, ecommerce website development, responsive website development, business website development, SEO friendly website development"
+  />
+
+  <meta name="author" content="Apex Website Solutions" />
+  <meta name="robots" content="index, follow" />
+
+  <link
+    rel="canonical"
+    href="https://apexwebsitesolutions.in/services/website-development"
+  />
+
+  {/* Open Graph */}
+  <meta
+    property="og:title"
+    content="Website Development Services in Mumbai | Apex Website Solutions"
+  />
+
+  <meta
+    property="og:description"
+    content="Professional website development services including custom websites, WordPress, eCommerce, responsive web design, and SEO-friendly business websites."
+  />
+
+  <meta
+    property="og:url"
+    content="https://apexwebsitesolutions.in/services/website-development"
+  />
+
+  <meta property="og:type" content="website" />
+
+  <meta
+    property="og:site_name"
+    content="Apex Website Solutions"
+  />
+
+  {/* Twitter */}
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
+
+  <meta
+    name="twitter:title"
+    content="Website Development Services in Mumbai | Apex Website Solutions"
+  />
+
+  <meta
+    name="twitter:description"
+    content="Custom website development, WordPress websites, eCommerce solutions, and responsive business websites designed to help your business grow."
+  />
+
+  <script type="application/ld+json">
+    {JSON.stringify(organizationSchema)}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify(breadcrumbSchema)}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify(faqSchema)}
+  </script>
+</Helmet>
 
       <div className="min-h-screen bg-white pt-32 pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,10 +173,14 @@ const WebsiteDevelopmentPage = () => {
                 AFFORDABLE WEB DEVELOPMENT
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-light mb-4" style={{ color: '#0F172A' }}>
-                Professional Websites
+                Professional
                 <br />
-                <span className="font-bold">Starting at ₹12,000</span>
+                <span className="font-bold"> Website Development Services</span>
               </h1>
+
+              <p className="text-xl mt-4" style={{ color: '#64748B' }}>
+                Starting at ₹12,000
+              </p>
               <div className="w-20 h-px mx-auto mb-6" style={{ backgroundColor: '#38BDF8' }} />
               <p className="text-lg max-w-2xl mx-auto mb-8" style={{ color: '#4A5568' }}>
                 Get a stunning, high-performance website without breaking the bank. Perfect for businesses, startups, and entrepreneurs.
@@ -175,7 +231,7 @@ const WebsiteDevelopmentPage = () => {
               Our <span className="font-bold">Packages</span>
             </h2>
             <p className="text-center mb-10" style={{ color: '#4A5568' }}>Choose the perfect package for your business needs</p>
-            
+
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {websiteTypes.map((type, index) => (
                 <div key={index} className={`group rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition-all hover:-translate-y-2 relative ${type.popular ? 'border-2' : 'border'}`} style={{ backgroundColor: 'white', borderColor: type.popular ? '#38BDF8' : '#E2E8F0' }}>

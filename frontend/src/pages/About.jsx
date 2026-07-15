@@ -111,8 +111,8 @@ const About = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "ApexWeb Solutions",
-    "url": "https://apexwebsitesolutions.netlify.app",
-    "logo": "https://apexwebsitesolutions.netlify.app/logo.png",
+    "url": "https://apexwebsitesolutions.in/",
+    "logo": "https://apexwebsitesolutions.in/logo.png",
     "description": "Premium digital agency offering web development, SEO, and digital marketing services in India.",
     "founder": {
       "@type": "Person",
@@ -143,32 +143,77 @@ const About = () => {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apexwebsitesolutions.netlify.app" },
-      { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://apexwebsitesolutions.netlify.app/about" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apexwebsitesolutions.in/" },
+      { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://apexwebsitesolutions.in/about" }
     ]
   };
 
   return (
     <HelmetProvider>
-      <Helmet>
-        <title>About Us | ApexWeb Solutions - Digital Agency in India</title>
-        <meta name="description" content="Learn about ApexWeb Solutions - India's leading digital agency. 10+ years experience, 500+ projects delivered, 98% client satisfaction. Meet our expert team." />
-        <meta name="keywords" content="about us, digital agency, web development company, SEO agency India, digital marketing agency, our story, our team" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://apexwebsitesolutions.netlify.app/about" />
-        
-        <meta property="og:title" content="About ApexWeb Solutions | India's Leading Digital Agency" />
-        <meta property="og:description" content="10+ years of excellence. 500+ projects delivered. Meet our expert team and learn our story." />
-        <meta property="og:url" content="https://apexwebsitesolutions.netlify.app/about" />
-        <meta property="og:type" content="website" />
-        
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="About ApexWeb Solutions" />
-        <meta name="twitter:description" content="Learn about our journey, team, and values" />
-        
-        <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-      </Helmet>
+<Helmet>
+  <title>About Apex Website Solutions | Website Development & Digital Marketing Agency</title>
+
+  <meta
+    name="description"
+    content="Learn about Apex Website Solutions, a professional website development and digital marketing agency. We help businesses grow with web development, SEO, Google Ads, social media marketing, and custom digital solutions."
+  />
+
+  <meta
+    name="keywords"
+    content="about Apex Website Solutions, website development company, digital marketing agency, SEO company, WordPress development, Google Ads services, social media marketing, web design company, digital solutions"
+  />
+
+  <meta name="robots" content="index, follow" />
+
+  <link rel="canonical" href="https://apexwebsitesolutions.in/about" />
+
+  {/* Open Graph */}
+  <meta
+    property="og:title"
+    content="About Apex Website Solutions | Website Development & Digital Marketing Agency"
+  />
+
+  <meta
+    property="og:description"
+    content="Learn about Apex Website Solutions and how we help businesses grow with professional website development, SEO, Google Ads, and digital marketing services."
+  />
+
+  <meta
+    property="og:url"
+    content="https://apexwebsitesolutions.in/about"
+  />
+
+  <meta property="og:type" content="website" />
+
+  <meta
+    property="og:site_name"
+    content="Apex Website Solutions"
+  />
+
+  {/* Twitter */}
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
+
+  <meta
+    name="twitter:title"
+    content="About Apex Website Solutions"
+  />
+
+  <meta
+    name="twitter:description"
+    content="Discover our journey, expertise, and commitment to delivering professional website development and digital marketing solutions."
+  />
+
+  <script type="application/ld+json">
+    {JSON.stringify(organizationSchema)}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify(breadcrumbSchema)}
+  </script>
+</Helmet>
 
       <div className="min-h-screen bg-white pt-32 pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -1,8 +1,9 @@
 // pages/Contact.jsx
 import React, { useState, useEffect, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const Contact = () => {
+  const navigate = useNavigate();
   const [isVisible, setIsVisible] = useState(false);
   const [formData, setFormData] = useState({
     name: '',
@@ -13,6 +14,7 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState(null);
+  const [submitMessage, setSubmitMessage] = useState('');
   const headerRef = useRef(null);
 
   useEffect(() => {
@@ -43,22 +45,62 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
-      setSubmitStatus('success');
-      setIsSubmitting(false);
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        service: '',
-        message: ''
-      });
+    setSubmitStatus(null);
+    setSubmitMessage('');
+
+    try {
+      // Create FormData object
+      const formDataObj = new FormData();
+      formDataObj.append('access_key', '67c00c2a-ad18-471a-a6ae-99f4f1bb7746');
       
-      // Clear success message after 5 seconds
-      setTimeout(() => setSubmitStatus(null), 5000);
-    }, 1500);
+      // Only include the main form fields
+      formDataObj.append('name', formData.name);
+      formDataObj.append('email', formData.email);
+      formDataObj.append('phone', formData.phone);
+      formDataObj.append('service', formData.service);
+      formDataObj.append('message', formData.message);
+      formDataObj.append('subject', `New Contact Form Submission from ${formData.name}`);
+      
+      // Add reply-to configuration (without auto-reply)
+      formDataObj.append('replyto', formData.email);
+      formDataObj.append('from_name', 'AW Solutions');
+
+      // Send to Web3Forms
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: formDataObj
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        // Reset form
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          service: '',
+          message: ''
+        });
+
+        // Redirect to Thank You page
+        navigate('/thank-you', { 
+          state: { 
+            name: formData.name,
+            email: formData.email
+          } 
+        });
+      } else {
+        setSubmitStatus('error');
+        setSubmitMessage(data.message || 'Something went wrong. Please try again.');
+        setIsSubmitting(false);
+      }
+    } catch (error) {
+      console.error('Submission Error:', error);
+      setSubmitStatus('error');
+      setSubmitMessage('Network error. Please check your connection and try again.');
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
@@ -77,7 +119,7 @@ const Contact = () => {
     {
       icon: '✉️',
       title: 'Email Us',
-      details: ['ashishwebmakesite@gmail.com' ],
+      details: ['ashishwebmakesite@gmail.com'],
       link: 'mailto:ashishwebmakesite@gmail.com'
     },
     {
@@ -277,9 +319,12 @@ const Contact = () => {
                   )}
                 </button>
 
-                {submitStatus === 'success' && (
-                  <div className="p-4 rounded-lg text-center" style={{ backgroundColor: '#E8F5E9', color: '#2E7D32' }}>
-                    Thank you! Your message has been sent. We'll get back to you soon.
+                {submitStatus === 'error' && (
+                  <div className="p-4 rounded-lg text-center animate-slideDown" style={{ backgroundColor: '#FFEBEE', color: '#C62828' }}>
+                    <svg className="w-6 h-6 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clipRule="evenodd" />
+                    </svg>
+                    {submitMessage}
                   </div>
                 )}
               </form>
@@ -338,7 +383,6 @@ const Contact = () => {
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
-
 
             {/* Social Links */}
             <div className="mt-8 text-center">
@@ -422,15 +466,28 @@ const Contact = () => {
       </div>
 
       <style>{`
-        @keyframes fadeInUp {
+        @keyframes slideDown {
           from {
             opacity: 0;
-            transform: translateY(30px);
+            transform: translateY(-20px);
           }
           to {
             opacity: 1;
             transform: translateY(0);
           }
+        }
+        
+        @keyframes spin {
+          from { transform: rotate(0deg); }
+          to { transform: rotate(360deg); }
+        }
+        
+        .animate-slideDown {
+          animation: slideDown 0.5s ease-out;
+        }
+        
+        .animate-spin {
+          animation: spin 1s linear infinite;
         }
         
         .group:hover .group-hover\\:scale-110 {

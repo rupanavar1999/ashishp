@@ -270,7 +270,7 @@ const SocialMediaMarketingPage = () => {
       "position": index + 1,
       "name": platform.name,
       "description": platform.description,
-      "url": `https://apexwebsitesolutions.netlify.app/services/social-media-marketing#${platform.id}`
+      "url": `https://apexwebsitesolutions.in/services/social-media-marketing#${platform.id}`
     }))
   };
 
@@ -279,8 +279,8 @@ const SocialMediaMarketingPage = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "ApexWeb Solutions",
-    "url": "https://apexwebsitesolutions.netlify.app",
-    "logo": "https://apexwebsitesolutions.netlify.app/logo.png",
+    "url": "https://apexwebsitesolutions.in/",
+    "logo": "https://apexwebsitesolutions.in/logo.png",
     "sameAs": [
       "https://linkedin.com/company/apexweb",
       "https://twitter.com/apexweb",
@@ -304,19 +304,19 @@ const SocialMediaMarketingPage = () => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://apexwebsitesolutions.netlify.app"
+        "item": "https://apexwebsitesolutions.in/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://apexwebsitesolutions.netlify.app/services"
+        "item": "https://apexwebsitesolutions.in/services"
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Social Media Marketing",
-        "item": "https://apexwebsitesolutions.netlify.app/services/social-media-marketing"
+        "item": "https://apexwebsitesolutions.in/services/social-media-marketing"
       }
     ]
   };
@@ -338,55 +338,102 @@ const SocialMediaMarketingPage = () => {
   return (
     <HelmetProvider>
       <Helmet>
-        {/* Primary Meta Tags */}
-        <title>Social Media Marketing Agency | Instagram, Facebook, LinkedIn Marketing | ApexWeb Solutions</title>
-        <meta name="title" content="Social Media Marketing Agency | Grow Your Brand Online | ApexWeb Solutions" />
-        <meta name="description" content="Top-rated social media marketing agency in India. Get Instagram, Facebook & LinkedIn marketing services. Increase engagement, followers & sales. Free social audit!" />
-        <meta name="keywords" content="social media marketing, Instagram marketing, Facebook marketing, LinkedIn marketing, social media agency India, SMM services, social media management, content creation, social media strategy, brand building, engagement growth, follower growth, social media advertising" />
-        <meta name="author" content="ApexWeb Solutions" />
-        <meta name="robots" content="index, follow" />
-        <meta name="language" content="English" />
-        <meta name="revisit-after" content="7 days" />
-        
-        {/* Canonical URL */}
-        <link rel="canonical" href="https://apexwebsitesolutions.netlify.app/services/social-media-marketing" />
-        
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://apexwebsitesolutions.netlify.app/services/social-media-marketing" />
-        <meta property="og:title" content="Social Media Marketing Agency | Grow Your Brand Online | ApexWeb Solutions" />
-        <meta property="og:description" content="Boost your brand's social presence with our expert SMM services. Instagram, Facebook & LinkedIn marketing. 450% avg engagement increase. Get free audit today!" />
-        <meta property="og:image" content="https://apexwebsitesolutions.netlify.app/og-social-media-marketing.jpg" />
-        <meta property="og:site_name" content="ApexWeb Solutions" />
-        <meta property="og:locale" content="en_IN" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://apexwebsitesolutions.netlify.app/services/social-media-marketing" />
-        <meta name="twitter:title" content="Social Media Marketing Agency | ApexWeb Solutions" />
-        <meta name="twitter:description" content="Expert social media marketing services. Grow your brand on Instagram, Facebook & LinkedIn. 95% client satisfaction. Book free consultation!" />
-        <meta name="twitter:image" content="https://apexwebsitesolutions.netlify.app/twitter-social-media-marketing.jpg" />
-        
-        {/* Additional SEO Meta Tags */}
-        <meta name="geo.region" content="IN-GA" />
-        <meta name="geo.placename" content="Panaji" />
-        <meta name="geo.position" content="15.4989;73.8278" />
-        <meta name="ICBM" content="15.4989, 73.8278" />
-        
-        {/* Schema.org markup for Google */}
-        <script type="application/ld+json">
-          {JSON.stringify(organizationSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(breadcrumbSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(servicesSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(faqSchema)}
-        </script>
-      </Helmet>
+  {/* Primary Meta Tags */}
+  <title>Social Media Marketing Services | Instagram, Facebook & LinkedIn Marketing | Apex Website Solutions</title>
+
+  <meta
+    name="description"
+    content="Grow your business with professional social media marketing services from Apex Website Solutions. We provide Instagram marketing, Facebook marketing, LinkedIn marketing, social media management, content creation, and paid social media advertising."
+  />
+
+  <meta
+    name="keywords"
+    content="social media marketing services, social media marketing agency, social media management, Instagram marketing services, Facebook marketing services, LinkedIn marketing services, social media advertising, content creation services, brand marketing, social media strategy, paid social media campaigns"
+  />
+
+  <meta name="author" content="Apex Website Solutions" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+
+  {/* Canonical */}
+  <link
+    rel="canonical"
+    href="https://apexwebsitesolutions.in/services/social-media-marketing"
+  />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+
+  <meta
+    property="og:url"
+    content="https://apexwebsitesolutions.in/services/social-media-marketing"
+  />
+
+  <meta
+    property="og:title"
+    content="Social Media Marketing Services | Apex Website Solutions"
+  />
+
+  <meta
+    property="og:description"
+    content="Professional Instagram, Facebook, LinkedIn, and social media marketing services to help businesses increase brand awareness, engagement, and quality leads."
+  />
+
+  <meta
+    property="og:image"
+    content="https://apexwebsitesolutions.in/og-social-media-marketing.jpg"
+  />
+
+  <meta
+    property="og:site_name"
+    content="Apex Website Solutions"
+  />
+
+  <meta property="og:locale" content="en_IN" />
+
+  {/* Twitter */}
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
+
+  <meta
+    name="twitter:url"
+    content="https://apexwebsitesolutions.in/services/social-media-marketing"
+  />
+
+  <meta
+    name="twitter:title"
+    content="Social Media Marketing Services | Apex Website Solutions"
+  />
+
+  <meta
+    name="twitter:description"
+    content="Professional social media marketing services including Instagram, Facebook, LinkedIn marketing, content creation, and paid social media campaigns."
+  />
+
+  <meta
+    name="twitter:image"
+    content="https://apexwebsitesolutions.in/twitter-social-media-marketing.jpg"
+  />
+
+  {/* Schema */}
+  <script type="application/ld+json">
+    {JSON.stringify(organizationSchema)}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify(breadcrumbSchema)}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify(servicesSchema)}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify(faqSchema)}
+  </script>
+</Helmet>
 
       <div className="min-h-screen bg-white pt-32 pb-24 overflow-hidden">
         {/* Hero Section */}

@@ -224,8 +224,8 @@ const ServicesPage = () => {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "ApexWeb Solutions",
-    "url": "https://apexwebsitesolutions.netlify.app",
-    "logo": "https://apexwebsitesolutions.netlify.app/logo.png",
+    "url": "https://apexwebsitesolutions.in/",
+    "logo": "https://apexwebsitesolutions.in/logo.png",
     "sameAs": [
       "https://linkedin.com/company/apexweb",
       "https://twitter.com/apexweb",
@@ -248,66 +248,114 @@ const ServicesPage = () => {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": "https://apexwebsitesolutions.netlify.app"
+        "item": "https://apexwebsitesolutions.in/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "Services",
-        "item": "https://apexwebsitesolutions.netlify.app/services"
+        "item": "https://apexwebsitesolutions.in/services"
       }
     ]
   };
 
   return (
     <HelmetProvider>
-      <Helmet>
-        {/* Primary Meta Tags */}
-        <title>ApexWeb Solutions - Digital Services | Website Development, SEO, SMM | India's Top Digital Agency</title>
-        <meta name="title" content="ApexWeb Solutions - Digital Services | Website Development, SEO, SMM" />
-        <meta name="description" content="India's leading digital agency offering website development, SEO services, social media marketing, Google Business Profile optimization, and performance marketing. Get ranked on Google's first page!" />
-        <meta name="keywords" content="digital services, website development, SEO services, social media marketing, Google Business Profile, performance marketing, UI/UX design, landing page design, website maintenance, digital agency India, rank higher on Google, increase website traffic, local SEO services" />
-        <meta name="author" content="ApexWeb Solutions" />
-        <meta name="robots" content="index, follow" />
-        <meta name="language" content="English" />
-        <meta name="revisit-after" content="7 days" />
-        
-        {/* Canonical URL */}
-        <link rel="canonical" href="https://apexwebsitesolutions.netlify.app/services" />
-        
-        {/* Open Graph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://apexwebsitesolutions.netlify.app/services" />
-        <meta property="og:title" content="ApexWeb Solutions - Premium Digital Services for Business Growth" />
-        <meta property="og:description" content="Get top rankings on Google with our comprehensive digital services. Website development, SEO, social media marketing, and more." />
-        <meta property="og:image" content="https://apexwebsitesolutions.netlify.app/og-image-services.jpg" />
-        <meta property="og:site_name" content="ApexWeb Solutions" />
-        <meta property="og:locale" content="en_IN" />
-        
-        {/* Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content="https://apexwebsitesolutions.netlify.app/services" />
-        <meta name="twitter:title" content="ApexWeb Solutions - Digital Services" />
-        <meta name="twitter:description" content="Rank higher, get more traffic, and grow your business with our expert digital services." />
-        <meta name="twitter:image" content="https://apexwebsitesolutions.netlify.app/twitter-image-services.jpg" />
-        
-        {/* Additional SEO Meta Tags */}
-        <meta name="geo.region" content="IN-GA" />
-        <meta name="geo.placename" content="Panaji" />
-        <meta name="geo.position" content="15.4989;73.8278" />
-        <meta name="ICBM" content="15.4989, 73.8278" />
-        
-        {/* Schema.org markup for Google */}
-        <script type="application/ld+json">
-          {JSON.stringify(organizationSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(breadcrumbSchema)}
-        </script>
-        <script type="application/ld+json">
-          {JSON.stringify(servicesSchema)}
-        </script>
-      </Helmet>
+  <Helmet>
+  {/* Primary Meta Tags */}
+  <title>Digital Marketing & Website Development Services | Apex Website Solutions</title>
+
+  <meta
+    name="description"
+    content="Explore professional website development, SEO services, social media marketing, Google Business Profile optimization, performance marketing, UI/UX design, landing page design, and website maintenance services from Apex Website Solutions."
+  />
+
+  <meta
+    name="keywords"
+    content="website development services, SEO services, digital marketing services, social media marketing services, Google Business Profile optimization, performance marketing services, UI UX design, landing page design, WordPress development, ecommerce website development, website maintenance, local SEO services"
+  />
+
+  <meta name="author" content="Apex Website Solutions" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+
+  {/* Canonical */}
+  <link
+    rel="canonical"
+    href="https://apexwebsitesolutions.in/services"
+  />
+
+  {/* Open Graph */}
+  <meta property="og:type" content="website" />
+
+  <meta
+    property="og:url"
+    content="https://apexwebsitesolutions.in/services"
+  />
+
+  <meta
+    property="og:title"
+    content="Digital Marketing & Website Development Services | Apex Website Solutions"
+  />
+
+  <meta
+    property="og:description"
+    content="Professional website development, SEO, Google Ads, social media marketing, Google Business Profile optimization, UI/UX design, and performance marketing services."
+  />
+
+  <meta
+    property="og:image"
+    content="https://apexwebsitesolutions.in/og-image-services.jpg"
+  />
+
+  <meta
+    property="og:site_name"
+    content="Apex Website Solutions"
+  />
+
+  <meta
+    property="og:locale"
+    content="en_IN"
+  />
+
+  {/* Twitter */}
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
+
+  <meta
+    name="twitter:url"
+    content="https://apexwebsitesolutions.in/services"
+  />
+
+  <meta
+    name="twitter:title"
+    content="Digital Marketing & Website Development Services | Apex Website Solutions"
+  />
+
+  <meta
+    name="twitter:description"
+    content="Professional website development, SEO, social media marketing, Google Business Profile optimization, and performance marketing services."
+  />
+
+  <meta
+    name="twitter:image"
+    content="https://apexwebsitesolutions.in/twitter-image-services.jpg"
+  />
+
+  <script type="application/ld+json">
+    {JSON.stringify(organizationSchema)}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify(breadcrumbSchema)}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify(servicesSchema)}
+  </script>
+</Helmet>
 
       <div className="min-h-screen bg-white pt-32 pb-24 overflow-hidden">
         {/* Hero Section */}

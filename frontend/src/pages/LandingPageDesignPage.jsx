@@ -163,27 +163,81 @@ const LandingPageDesignPage = () => {
 
   return (
     <HelmetProvider>
-      <Helmet>
-        <title>Affordable Landing Page Design | Starting at ₹6,000 | ApexWeb Solutions</title>
-        <meta name="description" content="Professional landing page design starting at just ₹6,000. Increase conversions by up to 300%. Mobile-responsive, SEO-optimized, fast-loading pages. Free consultation!" />
-        <meta name="keywords" content="affordable landing page design, cheap landing page designer, landing page design India, high-converting landing pages, lead generation pages, product launch pages, SaaS landing pages" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href=" /landing-page-design" />
-        
-        <meta property="og:title" content="Affordable Landing Page Design | Starting at ₹6,000" />
-        <meta property="og:description" content="Get high-converting landing pages starting at just ₹6,000. 300% conversion increase guaranteed." />
-        <meta property="og:url" content=" /landing-page-design" />
-        <meta property="og:type" content="website" />
-        
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Affordable Landing Page Design | Starting at ₹6,000" />
-        <meta name="twitter:description" content="Professional landing page design. Free consultation available!" />
-        
-        <script type="application/ld+json">{JSON.stringify(organizationSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(breadcrumbSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
-        <script type="application/ld+json">{JSON.stringify(serviceSchema)}</script>
-      </Helmet>
+     <Helmet>
+  <title>Landing Page Design Services | High-Converting Landing Pages | Apex Website Solutions</title>
+
+  <meta
+    name="description"
+    content="Get professional landing page design services from Apex Website Solutions. We create fast, responsive, SEO-friendly, and high-converting landing pages for lead generation, products, startups, and businesses."
+  />
+
+  <meta
+    name="keywords"
+    content="landing page design services, landing page designer, landing page development, high converting landing pages, responsive landing page design, lead generation landing pages, business landing pages, custom landing page design, SEO landing pages, landing page developer"
+  />
+
+  <meta name="robots" content="index, follow" />
+
+  <link
+    rel="canonical"
+    href="https://apexwebsitesolutions.in/services/landing-page-design"
+  />
+
+  {/* Open Graph */}
+  <meta
+    property="og:title"
+    content="Landing Page Design Services | Apex Website Solutions"
+  />
+
+  <meta
+    property="og:description"
+    content="Professional landing page design services for businesses, startups, and marketing campaigns. Fast, responsive, SEO-friendly, and conversion-focused landing pages."
+  />
+
+  <meta
+    property="og:url"
+    content="https://apexwebsitesolutions.in/services/landing-page-design"
+  />
+
+  <meta property="og:type" content="website" />
+
+  <meta
+    property="og:site_name"
+    content="Apex Website Solutions"
+  />
+
+  {/* Twitter */}
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  />
+
+  <meta
+    name="twitter:title"
+    content="Landing Page Design Services | Apex Website Solutions"
+  />
+
+  <meta
+    name="twitter:description"
+    content="Professional landing page design services for lead generation, marketing campaigns, and business growth."
+  />
+
+  <script type="application/ld+json">
+    {JSON.stringify(organizationSchema)}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify(breadcrumbSchema)}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify(faqSchema)}
+  </script>
+
+  <script type="application/ld+json">
+    {JSON.stringify(serviceSchema)}
+  </script>
+</Helmet>
 
       <div className="min-h-screen bg-white pt-32 pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
