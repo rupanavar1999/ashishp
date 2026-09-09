@@ -1,7 +1,6 @@
-// pages/GoogleBusinessPage.jsx
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
 const GoogleBusinessPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -126,15 +125,30 @@ const GoogleBusinessPage = () => {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://apexwebsitesolutions.in/#organization",
     "name": "ApexWeb Solutions",
     "url": "https://apexwebsitesolutions.in/",
     "logo": "https://apexwebsitesolutions.in/logo.png",
-    "contactPoint": { "@type": "ContactPoint", "telephone": "+91- 98906-85066", "contactType": "customer service" }
+    "contactPoint": { "@type": "ContactPoint", "telephone": "+91-98906-85066", "contactType": "customer service", "availableLanguage": ["English", "Hindi"] }
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://apexwebsitesolutions.in/services/google-business-profile#service",
+    "name": "Google Business Profile Optimization Services",
+    "serviceType": "Local SEO & GMB Optimization",
+    "provider": {
+      "@id": "https://apexwebsitesolutions.in/#organization"
+    },
+    "description": "Improve your local search visibility with Google Business Profile Optimization Services. We help businesses optimize profiles, rank higher on Google Maps, and attract local customers.",
+    "areaServed": "India"
   };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id": "https://apexwebsitesolutions.in/services/google-business-profile#breadcrumb",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apexwebsitesolutions.in/" },
       { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://apexwebsitesolutions.in/services" },
@@ -142,75 +156,96 @@ const GoogleBusinessPage = () => {
     ]
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://apexwebsitesolutions.in/services/google-business-profile#faq",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
-    <HelmetProvider>
-   <Helmet>
-  <title>Google Business Profile Optimization Services | Local SEO Experts | Apex Website Solutions</title>
+    <>
+      <Helmet>
+        <title>Google Business Profile Optimization & Local SEO | ApexWeb Solutions</title>
+        <meta name="title" content="Google Business Profile Optimization & Local SEO | ApexWeb Solutions" />
+        <meta
+          name="description"
+          content="Improve your local search visibility with Google Business Profile Optimization Services. ApexWeb Solutions helps businesses optimize Google Business Profiles, rank higher on Google Maps, and attract more local customers."
+        />
+        <meta
+          name="keywords"
+          content="Google Business Profile Optimization, Google Business Profile Services, Google Business Profile Management, Google Business Profile Expert, Google Business Profile SEO, Google Maps SEO, Google Maps Ranking, Local SEO Services, Google Business Profile Agency, Google My Business Optimization"
+        />
+        <meta name="author" content="ApexWeb Solutions" />
+        <meta name="robots" content="index, follow" />
+        <link
+          rel="canonical"
+          href="https://apexwebsitesolutions.in/services/google-business-profile"
+        />
 
-  <meta
-    name="description"
-    content="Improve your local search visibility with Google Business Profile Optimization Services. Apex Website Solutions helps businesses optimize Google Business Profiles, rank higher on Google Maps, and attract more local customers."
-  />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Google Business Profile Optimization Services | ApexWeb Solutions"
+        />
+        <meta
+          property="og:description"
+          content="Boost your local business visibility with professional Google Business Profile optimization and Google Maps SEO services."
+        />
+        <meta
+          property="og:url"
+          content="https://apexwebsitesolutions.in/services/google-business-profile"
+        />
+        <meta property="og:image" content="https://apexwebsitesolutions.in/og-image.jpg" />
+        <meta
+          property="og:site_name"
+          content="ApexWeb Solutions"
+        />
+        <meta property="og:locale" content="en_IN" />
 
-  <meta
-    name="keywords"
-    content="Google Business Profile Optimization, Google Business Profile Services, Google Business Profile Management, Google Business Profile Expert, Google Business Profile SEO, Google Maps SEO, Google Maps Ranking, Local SEO Services, Google Business Profile Agency, Google My Business Optimization"
-  />
+        {/* Twitter */}
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+        />
+        <meta
+          name="twitter:url"
+          content="https://apexwebsitesolutions.in/services/google-business-profile"
+        />
+        <meta
+          name="twitter:title"
+          content="Google Business Profile Optimization Services | ApexWeb Solutions"
+        />
+        <meta
+          name="twitter:description"
+          content="Optimize your Google Business Profile, improve Google Maps rankings, and generate more local leads with ApexWeb Solutions."
+        />
+        <meta
+          name="twitter:image"
+          content="https://apexwebsitesolutions.in/og-image.jpg"
+        />
 
-  <meta name="robots" content="index, follow" />
-
-  <link
-    rel="canonical"
-    href="https://apexwebsitesolutions.in/services/google-business-profile"
-  />
-
-  {/* Open Graph */}
-  <meta
-    property="og:title"
-    content="Google Business Profile Optimization Services | Apex Website Solutions"
-  />
-
-  <meta
-    property="og:description"
-    content="Boost your local business visibility with professional Google Business Profile optimization and Google Maps SEO services."
-  />
-
-  <meta
-    property="og:url"
-    content="https://apexwebsitesolutions.in/services/google-business-profile"
-  />
-
-  <meta property="og:type" content="website" />
-
-  <meta
-    property="og:site_name"
-    content="Apex Website Solutions"
-  />
-
-  {/* Twitter */}
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  />
-
-  <meta
-    name="twitter:title"
-    content="Google Business Profile Optimization Services"
-  />
-
-  <meta
-    name="twitter:description"
-    content="Optimize your Google Business Profile, improve Google Maps rankings, and generate more local leads with Apex Website Solutions."
-  />
-
-  <script type="application/ld+json">
-    {JSON.stringify(organizationSchema)}
-  </script>
-
-  <script type="application/ld+json">
-    {JSON.stringify(breadcrumbSchema)}
-  </script>
-</Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(organizationSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+      </Helmet>
 
       <div className="min-h-screen bg-white pt-32 pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -394,7 +429,7 @@ const GoogleBusinessPage = () => {
           </section>
         </div>
       </div>
-    </HelmetProvider>
+    </>
   );
 };
 

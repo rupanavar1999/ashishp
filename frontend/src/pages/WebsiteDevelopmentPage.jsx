@@ -1,7 +1,6 @@
-// pages/WebsiteDevelopmentPage.jsx
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
 const WebsiteDevelopmentPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -62,16 +61,41 @@ const WebsiteDevelopmentPage = () => {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://apexwebsitesolutions.in/#organization",
     "name": "ApexWeb Solutions",
     "url": "https://apexwebsitesolutions.in/",
     "logo": "https://apexwebsitesolutions.in/logo.png",
     "sameAs": ["https://linkedin.com/company/apexweb", "https://twitter.com/apexweb", "https://facebook.com/apexweb"],
-    "contactPoint": { "@type": "ContactPoint", "telephone": "+91- 98906-85066", "contactType": "customer service", "availableLanguage": ["English", "Hindi"] }
+    "contactPoint": { "@type": "ContactPoint", "telephone": "+91-98906-85066", "contactType": "customer service", "availableLanguage": ["English", "Hindi"] }
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://apexwebsitesolutions.in/services/website-development#service",
+    "name": "Website Development Services",
+    "serviceType": "Web Development",
+    "provider": {
+      "@id": "https://apexwebsitesolutions.in/#organization"
+    },
+    "description": "ApexWeb Solutions offers professional website development services including custom websites, WordPress development, eCommerce websites, and responsive web design.",
+    "areaServed": "India",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Website Development Packages",
+      "itemListElement": websiteTypes.map((item) => ({
+        "@type": "Offer",
+        "name": item.name,
+        "price": item.price.replace(/[^0-9]/g, ''),
+        "priceCurrency": "INR"
+      }))
+    }
   };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id": "https://apexwebsitesolutions.in/services/website-development#breadcrumb",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apexwebsitesolutions.in/" },
       { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://apexwebsitesolutions.in/services" },
@@ -82,6 +106,7 @@ const WebsiteDevelopmentPage = () => {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    "@id": "https://apexwebsitesolutions.in/services/website-development#faq",
     "mainEntity": [
       { "@type": "Question", "name": "How long does it take to build a website?", "acceptedAnswer": { "@type": "Answer", "text": "Typically 7-14 days depending on the complexity of your project." } },
       { "@type": "Question", "name": "Will my website be mobile-friendly?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! All our websites are 100% responsive and look great on all devices." } },
@@ -90,79 +115,68 @@ const WebsiteDevelopmentPage = () => {
   };
 
   return (
-    <HelmetProvider>
-   <Helmet>
-  <title>Website Development Services in Mumbai | WordPress & eCommerce | Apex Website Solutions</title>
+    <>
+      <Helmet>
+        <title>Website Development Services | Custom Websites & eCommerce | ApexWeb Solutions</title>
+        <meta name="title" content="Website Development Services | Custom Websites & eCommerce | ApexWeb Solutions" />
+        <meta
+          name="description"
+          content="ApexWeb Solutions offers professional website development services including custom websites, WordPress development, eCommerce websites, responsive web design, and SEO-friendly business websites."
+        />
+        <meta
+          name="keywords"
+          content="website development services, website development company, custom website development, WordPress website development, ecommerce website development, responsive website development, business website development, SEO friendly website development"
+        />
+        <meta name="author" content="ApexWeb Solutions" />
+        <meta name="robots" content="index, follow" />
+        <link
+          rel="canonical"
+          href="https://apexwebsitesolutions.in/services/website-development"
+        />
 
-  <meta
-    name="description"
-    content="Apex Website Solutions offers professional website development services in Mumbai including custom websites, WordPress development, eCommerce websites, responsive web design, and SEO-friendly business websites."
-  />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Website Development Services | Custom Websites & eCommerce | ApexWeb Solutions"
+        />
+        <meta
+          property="og:description"
+          content="Professional website development services including custom websites, WordPress, eCommerce, responsive web design, and SEO-friendly business websites."
+        />
+        <meta
+          property="og:url"
+          content="https://apexwebsitesolutions.in/services/website-development"
+        />
+        <meta property="og:image" content="https://apexwebsitesolutions.in/og-image.jpg" />
+        <meta property="og:site_name" content="ApexWeb Solutions" />
+        <meta property="og:locale" content="en_IN" />
 
-  <meta
-    name="keywords"
-    content="website development services, website development company, website development Mumbai, website developer Mumbai, custom website development, WordPress website development, ecommerce website development, responsive website development, business website development, SEO friendly website development"
-  />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Website Development Services | Custom Websites & eCommerce | ApexWeb Solutions"
+        />
+        <meta
+          name="twitter:description"
+          content="Custom website development, WordPress websites, eCommerce solutions, and responsive business websites designed to help your business grow."
+        />
+        <meta name="twitter:image" content="https://apexwebsitesolutions.in/og-image.jpg" />
 
-  <meta name="author" content="Apex Website Solutions" />
-  <meta name="robots" content="index, follow" />
-
-  <link
-    rel="canonical"
-    href="https://apexwebsitesolutions.in/services/website-development"
-  />
-
-  {/* Open Graph */}
-  <meta
-    property="og:title"
-    content="Website Development Services in Mumbai | Apex Website Solutions"
-  />
-
-  <meta
-    property="og:description"
-    content="Professional website development services including custom websites, WordPress, eCommerce, responsive web design, and SEO-friendly business websites."
-  />
-
-  <meta
-    property="og:url"
-    content="https://apexwebsitesolutions.in/services/website-development"
-  />
-
-  <meta property="og:type" content="website" />
-
-  <meta
-    property="og:site_name"
-    content="Apex Website Solutions"
-  />
-
-  {/* Twitter */}
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  />
-
-  <meta
-    name="twitter:title"
-    content="Website Development Services in Mumbai | Apex Website Solutions"
-  />
-
-  <meta
-    name="twitter:description"
-    content="Custom website development, WordPress websites, eCommerce solutions, and responsive business websites designed to help your business grow."
-  />
-
-  <script type="application/ld+json">
-    {JSON.stringify(organizationSchema)}
-  </script>
-
-  <script type="application/ld+json">
-    {JSON.stringify(breadcrumbSchema)}
-  </script>
-
-  <script type="application/ld+json">
-    {JSON.stringify(faqSchema)}
-  </script>
-</Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(organizationSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+      </Helmet>
 
       <div className="min-h-screen bg-white pt-32 pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -298,7 +312,7 @@ const WebsiteDevelopmentPage = () => {
           </div>
         </div>
       </div>
-    </HelmetProvider>
+    </>
   );
 };
 

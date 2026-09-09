@@ -1,7 +1,6 @@
-// pages/ServicesPage.jsx
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
 const ServicesPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -198,9 +197,11 @@ const ServicesPage = () => {
   ];
 
   // Schema markup for services
+  // Schema markup for services
   const servicesSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
+    "@id": "https://apexwebsitesolutions.in/services#serviceslist",
     "name": "Digital Services Offered by ApexWeb Solutions",
     "description": "Comprehensive digital services including website development, SEO, social media marketing, and more.",
     "numberOfItems": services.length,
@@ -209,7 +210,7 @@ const ServicesPage = () => {
       "position": index + 1,
       "name": service.name,
       "description": service.description,
-      "url": ` /services/${service.id}`,
+      "url": `https://apexwebsitesolutions.in/services/${service.id}`,
       "offers": {
         "@type": "Offer",
         "price": service.price.replace(/[^0-9]/g, ''),
@@ -223,6 +224,7 @@ const ServicesPage = () => {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://apexwebsitesolutions.in/#organization",
     "name": "ApexWeb Solutions",
     "url": "https://apexwebsitesolutions.in/",
     "logo": "https://apexwebsitesolutions.in/logo.png",
@@ -233,7 +235,7 @@ const ServicesPage = () => {
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+91- 98906-85066",
+      "telephone": "+91-98906-85066",
       "contactType": "customer service",
       "availableLanguage": ["English", "Hindi"]
     }
@@ -243,6 +245,7 @@ const ServicesPage = () => {
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id": "https://apexwebsitesolutions.in/services#breadcrumb",
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -259,103 +262,77 @@ const ServicesPage = () => {
     ]
   };
 
+  const collectionPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "@id": "https://apexwebsitesolutions.in/services#webpage",
+    "url": "https://apexwebsitesolutions.in/services",
+    "name": "Digital Marketing & Website Development Services | ApexWeb Solutions",
+    "description": "Explore professional website development, SEO services, social media marketing, and performance marketing from ApexWeb Solutions.",
+    "isPartOf": {
+      "@id": "https://apexwebsitesolutions.in/#website"
+    },
+    "breadcrumb": {
+      "@id": "https://apexwebsitesolutions.in/services#breadcrumb"
+    }
+  };
+
   return (
-    <HelmetProvider>
-  <Helmet>
-  {/* Primary Meta Tags */}
-  <title>Digital Marketing & Website Development Services | Apex Website Solutions</title>
+    <>
+      <Helmet>
+        {/* Primary Meta Tags */}
+        <title>Digital Marketing & Website Development Services | ApexWeb Solutions</title>
+        <meta name="title" content="Digital Marketing & Website Development Services | ApexWeb Solutions" />
+        <meta
+          name="description"
+          content="Explore professional website development, SEO services, social media marketing, Google Business Profile optimization, performance marketing, UI/UX design, landing page design, and website maintenance services from ApexWeb Solutions."
+        />
+        <meta
+          name="keywords"
+          content="website development services, SEO services, digital marketing services, social media marketing services, Google Business Profile optimization, performance marketing services, UI UX design, landing page design, WordPress development, ecommerce website development, website maintenance, local SEO services"
+        />
+        <meta name="author" content="ApexWeb Solutions" />
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="English" />
 
-  <meta
-    name="description"
-    content="Explore professional website development, SEO services, social media marketing, Google Business Profile optimization, performance marketing, UI/UX design, landing page design, and website maintenance services from Apex Website Solutions."
-  />
+        {/* Canonical */}
+        <link rel="canonical" href="https://apexwebsitesolutions.in/services" />
 
-  <meta
-    name="keywords"
-    content="website development services, SEO services, digital marketing services, social media marketing services, Google Business Profile optimization, performance marketing services, UI UX design, landing page design, WordPress development, ecommerce website development, website maintenance, local SEO services"
-  />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://apexwebsitesolutions.in/services" />
+        <meta property="og:title" content="Digital Marketing & Website Development Services | ApexWeb Solutions" />
+        <meta
+          property="og:description"
+          content="Professional website development, SEO, Google Ads, social media marketing, Google Business Profile optimization, UI/UX design, and performance marketing services."
+        />
+        <meta property="og:image" content="https://apexwebsitesolutions.in/og-image.jpg" />
+        <meta property="og:site_name" content="ApexWeb Solutions" />
+        <meta property="og:locale" content="en_IN" />
 
-  <meta name="author" content="Apex Website Solutions" />
-  <meta name="robots" content="index, follow" />
-  <meta name="language" content="English" />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://apexwebsitesolutions.in/services" />
+        <meta name="twitter:title" content="Digital Marketing & Website Development Services | ApexWeb Solutions" />
+        <meta
+          name="twitter:description"
+          content="Professional website development, SEO, social media marketing, Google Business Profile optimization, and performance marketing services."
+        />
+        <meta name="twitter:image" content="https://apexwebsitesolutions.in/og-image.jpg" />
 
-  {/* Canonical */}
-  <link
-    rel="canonical"
-    href="https://apexwebsitesolutions.in/services"
-  />
-
-  {/* Open Graph */}
-  <meta property="og:type" content="website" />
-
-  <meta
-    property="og:url"
-    content="https://apexwebsitesolutions.in/services"
-  />
-
-  <meta
-    property="og:title"
-    content="Digital Marketing & Website Development Services | Apex Website Solutions"
-  />
-
-  <meta
-    property="og:description"
-    content="Professional website development, SEO, Google Ads, social media marketing, Google Business Profile optimization, UI/UX design, and performance marketing services."
-  />
-
-  <meta
-    property="og:image"
-    content="https://apexwebsitesolutions.in/og-image-services.jpg"
-  />
-
-  <meta
-    property="og:site_name"
-    content="Apex Website Solutions"
-  />
-
-  <meta
-    property="og:locale"
-    content="en_IN"
-  />
-
-  {/* Twitter */}
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  />
-
-  <meta
-    name="twitter:url"
-    content="https://apexwebsitesolutions.in/services"
-  />
-
-  <meta
-    name="twitter:title"
-    content="Digital Marketing & Website Development Services | Apex Website Solutions"
-  />
-
-  <meta
-    name="twitter:description"
-    content="Professional website development, SEO, social media marketing, Google Business Profile optimization, and performance marketing services."
-  />
-
-  <meta
-    name="twitter:image"
-    content="https://apexwebsitesolutions.in/twitter-image-services.jpg"
-  />
-
-  <script type="application/ld+json">
-    {JSON.stringify(organizationSchema)}
-  </script>
-
-  <script type="application/ld+json">
-    {JSON.stringify(breadcrumbSchema)}
-  </script>
-
-  <script type="application/ld+json">
-    {JSON.stringify(servicesSchema)}
-  </script>
-</Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(organizationSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(collectionPageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(servicesSchema)}
+        </script>
+      </Helmet>
 
       <div className="min-h-screen bg-white pt-32 pb-24 overflow-hidden">
         {/* Hero Section */}
@@ -624,7 +601,7 @@ const ServicesPage = () => {
         .group:hover .group-hover\\:translate-x-1 { transform: translateX(4px); }
         .hover\\:shadow-3xl:hover { box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.3); }
       `}</style>
-    </HelmetProvider>
+    </>
   );
 };
 

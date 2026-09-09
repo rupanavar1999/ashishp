@@ -1,7 +1,6 @@
-// pages/SEOPage.jsx
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
 const SEOPage = () => {
   const [statsInView, setStatsInView] = useState(false);
@@ -109,16 +108,31 @@ const SEOPage = () => {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://apexwebsitesolutions.in/#organization",
     "name": "ApexWeb Solutions",
     "url": "https://apexwebsitesolutions.in/",
     "logo": "https://apexwebsitesolutions.in/logo.png",
     "sameAs": ["https://linkedin.com/company/apexweb", "https://twitter.com/apexweb", "https://facebook.com/apexweb"],
-    "contactPoint": { "@type": "ContactPoint", "telephone": "+91- 98906-85066", "contactType": "customer service", "availableLanguage": ["English", "Hindi"] }
+    "contactPoint": { "@type": "ContactPoint", "telephone": "+91-98906-85066", "contactType": "customer service", "availableLanguage": ["English", "Hindi"] }
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://apexwebsitesolutions.in/services/seo#service",
+    "name": "SEO Services",
+    "serviceType": "Search Engine Optimization",
+    "provider": {
+      "@id": "https://apexwebsitesolutions.in/#organization"
+    },
+    "description": "Professional search engine optimization services including technical SEO, local SEO, on-page SEO, link building, and Google Maps ranking.",
+    "areaServed": "India"
   };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id": "https://apexwebsitesolutions.in/services/seo#breadcrumb",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apexwebsitesolutions.in/" },
       { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://apexwebsitesolutions.in/services" },
@@ -129,95 +143,88 @@ const SEOPage = () => {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    "@id": "https://apexwebsitesolutions.in/services/seo#faq",
     "mainEntity": faqs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
   };
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
+    "@id": "https://apexwebsitesolutions.in/services/seo#localservice",
     "name": "ApexWeb Solutions - SEO Services",
+    "url": "https://apexwebsitesolutions.in/services/seo",
+    "image": "https://apexwebsitesolutions.in/og-image.jpg",
     "description": "Professional SEO services in India. Get your website ranked on Google's first page.",
     "address": { "@type": "PostalAddress", "addressLocality": "Panaji", "addressRegion": "Goa", "addressCountry": "IN" },
-    "priceRange": "₹25,000 - ₹99,000"
+    "priceRange": "₹25,000 - ₹99,000",
+    "telephone": "+91-98906-85066"
   };
 
   return (
-    <HelmetProvider>
+    <>
       <Helmet>
-    <title>SEO Services | Search Engine Optimization Company | Apex Website Solutions</title>
+        <title>SEO Services India | Search Engine Optimization & Google Ranking | ApexWeb</title>
+        <meta name="title" content="SEO Services India | Search Engine Optimization & Google Ranking | ApexWeb" />
+        <meta
+          name="description"
+          content="Improve your website's visibility with professional SEO services from ApexWeb Solutions. We provide technical SEO, on-page SEO, off-page SEO, local SEO, keyword research, and link building to help businesses grow organically."
+        />
+        <meta
+          name="keywords"
+          content="SEO services, search engine optimization, SEO company, SEO agency, technical SEO, local SEO services, on-page SEO, off-page SEO, link building services, keyword research, Google Business Profile optimization, ecommerce SEO, WordPress SEO, SEO expert India"
+        />
+        <meta name="robots" content="index, follow" />
+        <link
+          rel="canonical"
+          href="https://apexwebsitesolutions.in/services/seo"
+        />
 
-    <meta
-      name="description"
-      content="Improve your website's visibility with professional SEO services from Apex Website Solutions. We provide technical SEO, on-page SEO, off-page SEO, local SEO, keyword research, and link building to help businesses grow organically."
-    />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="SEO Services India | Search Engine Optimization | ApexWeb Solutions"
+        />
+        <meta
+          property="og:description"
+          content="Professional SEO services including technical SEO, local SEO, on-page SEO, off-page SEO, keyword research, and link building to improve your website's search visibility."
+        />
+        <meta
+          property="og:url"
+          content="https://apexwebsitesolutions.in/services/seo"
+        />
+        <meta property="og:image" content="https://apexwebsitesolutions.in/og-image.jpg" />
+        <meta property="og:site_name" content="ApexWeb Solutions" />
+        <meta property="og:locale" content="en_IN" />
 
-    <meta
-      name="keywords"
-      content="SEO services, search engine optimization, SEO company, SEO agency, technical SEO, local SEO services, on-page SEO, off-page SEO, link building services, keyword research, Google Business Profile optimization, ecommerce SEO, WordPress SEO, SEO expert India"
-    />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="SEO Services India | Search Engine Optimization | ApexWeb"
+        />
+        <meta
+          name="twitter:description"
+          content="Professional SEO services to improve Google rankings, increase organic traffic, and grow your business online."
+        />
+        <meta name="twitter:image" content="https://apexwebsitesolutions.in/og-image.jpg" />
 
-    <meta name="robots" content="index, follow" />
-
-    <link
-      rel="canonical"
-      href="https://apexwebsitesolutions.in/services/seo"
-    />
-
-    {/* Open Graph */}
-    <meta
-      property="og:title"
-      content="SEO Services | Search Engine Optimization | Apex Website Solutions"
-    />
-
-    <meta
-      property="og:description"
-      content="Professional SEO services including technical SEO, local SEO, on-page SEO, off-page SEO, keyword research, and link building to improve your website's search visibility."
-    />
-
-    <meta
-      property="og:url"
-      content="https://apexwebsitesolutions.in/services/seo"
-    />
-
-    <meta property="og:type" content="website" />
-
-    <meta
-      property="og:site_name"
-      content="Apex Website Solutions"
-    />
-
-    {/* Twitter */}
-    <meta
-      name="twitter:card"
-      content="summary_large_image"
-    />
-
-    <meta
-      name="twitter:title"
-      content="SEO Services | Apex Website Solutions"
-    />
-
-    <meta
-      name="twitter:description"
-      content="Professional SEO services to improve Google rankings, increase organic traffic, and grow your business online."
-    />
-
-    <script type="application/ld+json">
-      {JSON.stringify(organizationSchema)}
-    </script>
-
-    <script type="application/ld+json">
-      {JSON.stringify(breadcrumbSchema)}
-    </script>
-
-    <script type="application/ld+json">
-      {JSON.stringify(faqSchema)}
-    </script>
-
-    <script type="application/ld+json">
-      {JSON.stringify(localBusinessSchema)}
-    </script>
-  </Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(organizationSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(localBusinessSchema)}
+        </script>
+      </Helmet>
 
       <div className="min-h-screen bg-white pt-32 pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -374,7 +381,7 @@ const SEOPage = () => {
           </section>
         </div>
       </div>
-    </HelmetProvider>
+    </>
   );
 };
 

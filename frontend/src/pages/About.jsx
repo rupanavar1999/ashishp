@@ -1,7 +1,6 @@
-// pages/About.jsx
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
 const About = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -139,9 +138,25 @@ const About = () => {
     ]
   };
 
+  const aboutPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": "https://apexwebsitesolutions.in/about#webpage",
+    "url": "https://apexwebsitesolutions.in/about",
+    "name": "About ApexWeb Solutions | Website Development & Digital Marketing Agency",
+    "description": "Learn about ApexWeb Solutions, our journey, mission, team, and digital agency services.",
+    "isPartOf": {
+      "@id": "https://apexwebsitesolutions.in/#website"
+    },
+    "breadcrumb": {
+      "@id": "https://apexwebsitesolutions.in/about#breadcrumb"
+    }
+  };
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id": "https://apexwebsitesolutions.in/about#breadcrumb",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apexwebsitesolutions.in/" },
       { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://apexwebsitesolutions.in/about" }
@@ -149,71 +164,53 @@ const About = () => {
   };
 
   return (
-    <HelmetProvider>
-<Helmet>
-  <title>About Apex Website Solutions | Website Development & Digital Marketing Agency</title>
+    <>
+      <Helmet>
+        <title>About ApexWeb Solutions | Website Development & Digital Marketing Agency</title>
+        <meta name="title" content="About ApexWeb Solutions | Website Development & Digital Marketing Agency" />
+        <meta
+          name="description"
+          content="Learn about ApexWeb Solutions, a professional website development and digital marketing agency. We help businesses grow with web development, SEO, Google Ads, social media marketing, and custom digital solutions."
+        />
+        <meta
+          name="keywords"
+          content="about ApexWeb Solutions, website development company, digital marketing agency, SEO company, WordPress development, Google Ads services, social media marketing, web design company, digital solutions"
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://apexwebsitesolutions.in/about" />
 
-  <meta
-    name="description"
-    content="Learn about Apex Website Solutions, a professional website development and digital marketing agency. We help businesses grow with web development, SEO, Google Ads, social media marketing, and custom digital solutions."
-  />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://apexwebsitesolutions.in/about" />
+        <meta property="og:title" content="About ApexWeb Solutions | Website Development & Digital Marketing Agency" />
+        <meta
+          property="og:description"
+          content="Learn about ApexWeb Solutions and how we help businesses grow with professional website development, SEO, Google Ads, and digital marketing services."
+        />
+        <meta property="og:image" content="https://apexwebsitesolutions.in/og-image.jpg" />
+        <meta property="og:site_name" content="ApexWeb Solutions" />
+        <meta property="og:locale" content="en_IN" />
 
-  <meta
-    name="keywords"
-    content="about Apex Website Solutions, website development company, digital marketing agency, SEO company, WordPress development, Google Ads services, social media marketing, web design company, digital solutions"
-  />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:url" content="https://apexwebsitesolutions.in/about" />
+        <meta name="twitter:title" content="About ApexWeb Solutions | Digital Agency" />
+        <meta
+          name="twitter:description"
+          content="Discover our journey, expertise, and commitment to delivering professional website development and digital marketing solutions."
+        />
+        <meta name="twitter:image" content="https://apexwebsitesolutions.in/og-image.jpg" />
 
-  <meta name="robots" content="index, follow" />
-
-  <link rel="canonical" href="https://apexwebsitesolutions.in/about" />
-
-  {/* Open Graph */}
-  <meta
-    property="og:title"
-    content="About Apex Website Solutions | Website Development & Digital Marketing Agency"
-  />
-
-  <meta
-    property="og:description"
-    content="Learn about Apex Website Solutions and how we help businesses grow with professional website development, SEO, Google Ads, and digital marketing services."
-  />
-
-  <meta
-    property="og:url"
-    content="https://apexwebsitesolutions.in/about"
-  />
-
-  <meta property="og:type" content="website" />
-
-  <meta
-    property="og:site_name"
-    content="Apex Website Solutions"
-  />
-
-  {/* Twitter */}
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  />
-
-  <meta
-    name="twitter:title"
-    content="About Apex Website Solutions"
-  />
-
-  <meta
-    name="twitter:description"
-    content="Discover our journey, expertise, and commitment to delivering professional website development and digital marketing solutions."
-  />
-
-  <script type="application/ld+json">
-    {JSON.stringify(organizationSchema)}
-  </script>
-
-  <script type="application/ld+json">
-    {JSON.stringify(breadcrumbSchema)}
-  </script>
-</Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(organizationSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(aboutPageSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+      </Helmet>
 
       <div className="min-h-screen bg-white pt-32 pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -392,7 +389,7 @@ const About = () => {
           </section>
         </div>
       </div>
-    </HelmetProvider>
+    </>
   );
 };
 

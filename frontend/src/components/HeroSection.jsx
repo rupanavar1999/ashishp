@@ -1,6 +1,5 @@
 // components/HeroSection.jsx
 import React, { useEffect, useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -17,107 +16,8 @@ const HeroSection = () => {
     window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
   };
 
-  // Organization schema
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "ApexWeb Solutions",
-    "url": " ",
-    "logo": " /logo.png",
-    "description": "Premium digital agency offering web development, SEO, and digital marketing services.",
-    "sameAs": [
-      "https://linkedin.com/company/apexweb",
-      "https://twitter.com/apexweb",
-      "https://facebook.com/apexweb",
-      "https://instagram.com/apexweb"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+91- 98906-85066",
-      "contactType": "customer service",
-      "availableLanguage": ["English", "Hindi"],
-      "areaServed": "India"
-    }
-  };
-
-  const localBusinessSchema = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": "ApexWeb Solutions - Digital Agency",
-    "description": "Premium digital agency providing web development, SEO services, and digital marketing solutions.",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Panaji",
-      "addressRegion": "Goa",
-      "addressCountry": "IN"
-    },
-    "priceRange": "₹15,000 - ₹1,00,000",
-    "telephone": "+91- 98906-85066"
-  };
-
   return (
     <>
-   <Helmet>
-  <title>Website Development, SEO & Digital Marketing Services | Apex Website Solutions</title>
-
-  <link rel="canonical" href="https://apexwebsitesolutions.in/" />
-
-  <meta
-    name="description"
-    content="Apex Website Solutions offers professional website development, SEO, Google Ads, social media marketing, WordPress, Shopify, UI/UX design, and digital marketing services to help businesses grow online."
-  />
-
-  <meta
-    name="keywords"
-    content="website development services, website development company, web design services, SEO services, digital marketing agency, Google Ads management, social media marketing services, WordPress development, Shopify development, ecommerce website development, UI UX design, local SEO services, lead generation, online marketing"
-  />
-
-  <meta
-    property="og:title"
-    content="Website Development & Digital Marketing Services | Apex Website Solutions"
-  />
-
-  <meta
-    property="og:description"
-    content="Grow your business with professional website development, SEO, Google Ads, and social media marketing services from Apex Website Solutions."
-  />
-
-  <meta property="og:type" content="website" />
-
-  <meta
-    property="og:url"
-    content="https://apexwebsitesolutions.in/"
-  />
-
-  <meta
-    property="og:site_name"
-    content="Apex Website Solutions"
-  />
-
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  />
-
-  <meta
-    name="twitter:title"
-    content="Website Development & Digital Marketing Services | Apex Website Solutions"
-  />
-
-  <meta
-    name="twitter:description"
-    content="Professional website development, SEO, Google Ads and digital marketing services for businesses across India."
-  />
-
-  <script type="application/ld+json">
-    {JSON.stringify(organizationSchema)}
-  </script>
-
-  <script type="application/ld+json">
-    {JSON.stringify(localBusinessSchema)}
-  </script>
-</Helmet>
-
       <section className="py-30 relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white to-gray-50">
         {/* Modern Animated Background */}
         <div className="absolute inset-0 overflow-hidden">

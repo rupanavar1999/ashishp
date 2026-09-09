@@ -1,7 +1,7 @@
 // pages/WebsiteMaintenancePage.jsx
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
 const WebsiteMaintenancePage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -138,16 +138,18 @@ const WebsiteMaintenancePage = () => {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://apexwebsitesolutions.in/#organization",
     "name": "ApexWeb Solutions",
     "url": "https://apexwebsitesolutions.in/",
     "logo": "https://apexwebsitesolutions.in/logo.png",
     "sameAs": ["https://linkedin.com/company/apexweb", "https://twitter.com/apexweb", "https://facebook.com/apexweb"],
-    "contactPoint": { "@type": "ContactPoint", "telephone": "+91- 98906-85066", "contactType": "customer service", "availableLanguage": ["English", "Hindi"] }
+    "contactPoint": { "@type": "ContactPoint", "telephone": "+91-98906-85066", "contactType": "customer service", "availableLanguage": ["English", "Hindi"] }
   };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id": "https://apexwebsitesolutions.in/services/website-maintenance#breadcrumb",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apexwebsitesolutions.in/" },
       { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://apexwebsitesolutions.in/services" },
@@ -158,97 +160,83 @@ const WebsiteMaintenancePage = () => {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    "@id": "https://apexwebsitesolutions.in/services/website-maintenance#faq",
     "mainEntity": faqs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
   };
 
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": "https://apexwebsitesolutions.in/services/website-maintenance#service",
     "name": "Website Maintenance Services",
     "description": "Professional website maintenance services including security monitoring, daily backups, speed optimization, and 24/7 support.",
-    "provider": { "@type": "Organization", "name": "ApexWeb Solutions" },
+    "provider": { "@id": "https://apexwebsitesolutions.in/#organization" },
     "areaServed": "India",
     "priceRange": "₹5,000 - ₹20,000"
   };
 
   return (
-    <HelmetProvider>
-     <Helmet>
-  <title>Website Maintenance Services | WordPress & Website Support | Apex Website Solutions</title>
+    <>
+      <Helmet>
+        <title>Website Maintenance Services | WordPress & Website Support | ApexWeb Solutions</title>
+        <meta name="title" content="Website Maintenance Services | WordPress & Website Support | ApexWeb Solutions" />
+        <meta
+          name="description"
+          content="Keep your website secure, fast, and up to date with professional website maintenance services from ApexWeb Solutions. We provide WordPress maintenance, website security, backups, speed optimization, bug fixes, and ongoing technical support."
+        />
+        <meta
+          name="keywords"
+          content="website maintenance services, WordPress maintenance, website support services, website security, website backup services, website updates, speed optimization, website monitoring, website care plans, website bug fixes, website maintenance company"
+        />
+        <meta name="author" content="ApexWeb Solutions" />
+        <meta name="robots" content="index, follow" />
+        <link
+          rel="canonical"
+          href="https://apexwebsitesolutions.in/services/website-maintenance"
+        />
 
-  <meta
-    name="description"
-    content="Keep your website secure, fast, and up to date with professional website maintenance services from Apex Website Solutions. We provide WordPress maintenance, website security, backups, speed optimization, bug fixes, and ongoing technical support."
-  />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Website Maintenance Services | ApexWeb Solutions"
+        />
+        <meta
+          property="og:description"
+          content="Professional website maintenance services including security updates, backups, WordPress maintenance, speed optimization, bug fixes, and technical support."
+        />
+        <meta
+          property="og:url"
+          content="https://apexwebsitesolutions.in/services/website-maintenance"
+        />
+        <meta property="og:site_name" content="ApexWeb Solutions" />
+        <meta property="og:image" content="https://apexwebsitesolutions.in/og-image.jpg" />
 
-  <meta
-    name="keywords"
-    content="website maintenance services, WordPress maintenance, website support services, website security, website backup services, website updates, speed optimization, website monitoring, website care plans, website bug fixes, website maintenance company"
-  />
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Website Maintenance Services | ApexWeb Solutions"
+        />
+        <meta
+          name="twitter:description"
+          content="Professional website maintenance including WordPress updates, backups, website security, performance optimization, and technical support."
+        />
+        <meta name="twitter:image" content="https://apexwebsitesolutions.in/og-image.jpg" />
 
-  <meta name="author" content="Apex Website Solutions" />
-  <meta name="robots" content="index, follow" />
-
-  <link
-    rel="canonical"
-    href="https://apexwebsitesolutions.in/services/website-maintenance"
-  />
-
-  {/* Open Graph */}
-  <meta
-    property="og:title"
-    content="Website Maintenance Services | Apex Website Solutions"
-  />
-
-  <meta
-    property="og:description"
-    content="Professional website maintenance services including security updates, backups, WordPress maintenance, speed optimization, bug fixes, and technical support."
-  />
-
-  <meta
-    property="og:url"
-    content="https://apexwebsitesolutions.in/services/website-maintenance"
-  />
-
-  <meta property="og:type" content="website" />
-
-  <meta
-    property="og:site_name"
-    content="Apex Website Solutions"
-  />
-
-  {/* Twitter */}
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  />
-
-  <meta
-    name="twitter:title"
-    content="Website Maintenance Services | Apex Website Solutions"
-  />
-
-  <meta
-    name="twitter:description"
-    content="Professional website maintenance including WordPress updates, backups, website security, performance optimization, and technical support."
-  />
-
-  <script type="application/ld+json">
-    {JSON.stringify(organizationSchema)}
-  </script>
-
-  <script type="application/ld+json">
-    {JSON.stringify(breadcrumbSchema)}
-  </script>
-
-  <script type="application/ld+json">
-    {JSON.stringify(faqSchema)}
-  </script>
-
-  <script type="application/ld+json">
-    {JSON.stringify(serviceSchema)}
-  </script>
-</Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(organizationSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+      </Helmet>
 
       <div className="min-h-screen bg-white pt-32 pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -438,7 +426,7 @@ const WebsiteMaintenancePage = () => {
           </section>
         </div>
       </div>
-    </HelmetProvider>
+    </>
   );
 };
 

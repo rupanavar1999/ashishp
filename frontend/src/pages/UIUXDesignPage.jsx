@@ -1,7 +1,6 @@
-// pages/UIUXDesignPage.jsx
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
 const UIUXDesignPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -132,11 +131,13 @@ const UIUXDesignPage = () => {
   const servicesSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": "https://apexwebsitesolutions.in/services/ui-ux-design#service",
     "name": "UI/UX Design Services",
+    "serviceType": "UI/UX Design",
     "description": "Professional UI/UX design services including user research, wireframing, prototyping, and high-fidelity design.",
     "provider": {
       "@type": "Organization",
-      "name": "ApexWeb Solutions"
+      "@id": "https://apexwebsitesolutions.in/#organization"
     },
     "areaServed": "India",
     "hasOfferCatalog": {
@@ -157,6 +158,7 @@ const UIUXDesignPage = () => {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://apexwebsitesolutions.in/#organization",
     "name": "ApexWeb Solutions",
     "url": "https://apexwebsitesolutions.in/",
     "logo": "https://apexwebsitesolutions.in/logo.png",
@@ -169,7 +171,7 @@ const UIUXDesignPage = () => {
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+91- 98906-85066",
+      "telephone": "+91-98906-85066",
       "contactType": "customer service",
       "availableLanguage": ["English", "Hindi"]
     }
@@ -178,6 +180,7 @@ const UIUXDesignPage = () => {
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id": "https://apexwebsitesolutions.in/services/ui-ux-design#breadcrumb",
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -203,6 +206,7 @@ const UIUXDesignPage = () => {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    "@id": "https://apexwebsitesolutions.in/services/ui-ux-design#faq",
     "mainEntity": faqs.map(faq => ({
       "@type": "Question",
       "name": faq.question,
@@ -214,104 +218,88 @@ const UIUXDesignPage = () => {
   };
 
   return (
-    <HelmetProvider>
-     <Helmet>
-  {/* Primary Meta Tags */}
-  <title>UI/UX Design Services | Web & Mobile UI UX Design | Apex Website Solutions</title>
+    <>
+      <Helmet>
+        {/* Primary Meta Tags */}
+        <title>UI/UX Design Services | Web & Mobile App Interface Design | ApexWeb Solutions</title>
+        <meta name="title" content="UI/UX Design Services | Web & Mobile App Interface Design | ApexWeb Solutions" />
+        <meta
+          name="description"
+          content="Create engaging digital experiences with professional UI/UX design services from ApexWeb Solutions. We design user-friendly websites, mobile apps, wireframes, prototypes, and responsive interfaces using modern design principles."
+        />
+        <meta
+          name="keywords"
+          content="UI UX design services, UI UX design company, UI design services, UX design services, web UI design, mobile app UI design, Figma design services, wireframing, prototype design, user experience design, responsive UI design, product design, usability testing, design system"
+        />
+        <meta name="author" content="ApexWeb Solutions" />
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="English" />
 
-  <meta
-    name="description"
-    content="Create engaging digital experiences with professional UI/UX design services from Apex Website Solutions. We design user-friendly websites, mobile apps, wireframes, prototypes, and responsive interfaces using modern design principles."
-  />
+        {/* Canonical */}
+        <link
+          rel="canonical"
+          href="https://apexwebsitesolutions.in/services/ui-ux-design"
+        />
 
-  <meta
-    name="keywords"
-    content="UI UX design services, UI UX design company, UI design services, UX design services, web UI design, mobile app UI design, Figma design services, wireframing, prototype design, user experience design, responsive UI design, product design, usability testing, design system"
-  />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://apexwebsitesolutions.in/services/ui-ux-design"
+        />
+        <meta
+          property="og:title"
+          content="UI/UX Design Services | ApexWeb Solutions"
+        />
+        <meta
+          property="og:description"
+          content="Professional UI/UX design services for websites, mobile apps, wireframes, prototypes, and user-friendly digital experiences."
+        />
+        <meta
+          property="og:image"
+          content="https://apexwebsitesolutions.in/og-image.jpg"
+        />
+        <meta
+          property="og:site_name"
+          content="ApexWeb Solutions"
+        />
+        <meta property="og:locale" content="en_IN" />
 
-  <meta name="author" content="Apex Website Solutions" />
-  <meta name="robots" content="index, follow" />
-  <meta name="language" content="English" />
+        {/* Twitter */}
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+        />
+        <meta
+          name="twitter:url"
+          content="https://apexwebsitesolutions.in/services/ui-ux-design"
+        />
+        <meta
+          name="twitter:title"
+          content="UI/UX Design Services | ApexWeb Solutions"
+        />
+        <meta
+          name="twitter:description"
+          content="Award-winning UI/UX design services for intuitive user interfaces, higher engagement, and better conversions."
+        />
+        <meta
+          name="twitter:image"
+          content="https://apexwebsitesolutions.in/og-image.jpg"
+        />
 
-  {/* Canonical */}
-  <link
-    rel="canonical"
-    href="https://apexwebsitesolutions.in/services/ui-ux-design"
-  />
-
-  {/* Open Graph */}
-  <meta property="og:type" content="website" />
-
-  <meta
-    property="og:url"
-    content="https://apexwebsitesolutions.in/services/ui-ux-design"
-  />
-
-  <meta
-    property="og:title"
-    content="UI/UX Design Services | Apex Website Solutions"
-  />
-
-  <meta
-    property="og:description"
-    content="Professional UI/UX design services for websites, mobile apps, wireframes, prototypes, and user-friendly digital experiences."
-  />
-
-  <meta
-    property="og:image"
-    content="https://apexwebsitesolutions.in/og-uiux-design.jpg"
-  />
-
-  <meta
-    property="og:site_name"
-    content="Apex Website Solutions"
-  />
-
-  <meta property="og:locale" content="en_IN" />
-
-  {/* Twitter */}
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  />
-
-  <meta
-    name="twitter:url"
-    content="https://apexwebsitesolutions.in/services/ui-ux-design"
-  />
-
-  <meta
-    name="twitter:title"
-    content="UI/UX Design Services | Apex Website Solutions"
-  />
-
-  <meta
-    name="twitter:description"
-    content="Professional UI/UX design services including web design, mobile app design, wireframing, prototyping, and responsive user interface design."
-  />
-
-  <meta
-    name="twitter:image"
-    content="https://apexwebsitesolutions.in/twitter-uiux-design.jpg"
-  />
-
-  {/* Schema */}
-  <script type="application/ld+json">
-    {JSON.stringify(organizationSchema)}
-  </script>
-
-  <script type="application/ld+json">
-    {JSON.stringify(breadcrumbSchema)}
-  </script>
-
-  <script type="application/ld+json">
-    {JSON.stringify(servicesSchema)}
-  </script>
-
-  <script type="application/ld+json">
-    {JSON.stringify(faqSchema)}
-  </script>
-</Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(organizationSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(servicesSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+      </Helmet>
 
       <div className="min-h-screen bg-white pt-32 pb-24 overflow-hidden">
         {/* Hero Section */}
@@ -626,7 +614,7 @@ const UIUXDesignPage = () => {
         .delay-1000 { animation-delay: 1s; }
         .hover\\:shadow-3xl:hover { box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.3); }
       `}</style>
-    </HelmetProvider>
+    </>
   );
 };
 

@@ -1,7 +1,6 @@
-// pages/SocialMediaMarketingPage.jsx
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
 const SocialMediaMarketingPage = () => {
   const [activePlatform, setActivePlatform] = useState('instagram');
@@ -278,6 +277,7 @@ const SocialMediaMarketingPage = () => {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://apexwebsitesolutions.in/#organization",
     "name": "ApexWeb Solutions",
     "url": "https://apexwebsitesolutions.in/",
     "logo": "https://apexwebsitesolutions.in/logo.png",
@@ -289,16 +289,30 @@ const SocialMediaMarketingPage = () => {
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+91- 98906-85066",
+      "telephone": "+91-98906-85066",
       "contactType": "customer service",
       "availableLanguage": ["English", "Hindi"]
     }
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "@id": "https://apexwebsitesolutions.in/services/social-media-marketing#service",
+    "name": "Social Media Marketing Services",
+    "serviceType": "Social Media Marketing",
+    "provider": {
+      "@id": "https://apexwebsitesolutions.in/#organization"
+    },
+    "description": "Professional social media marketing services including Instagram, Facebook, and LinkedIn marketing, content creation, and paid advertising.",
+    "areaServed": "India"
   };
 
   // Breadcrumb schema
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id": "https://apexwebsitesolutions.in/services/social-media-marketing#breadcrumb",
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -325,6 +339,7 @@ const SocialMediaMarketingPage = () => {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    "@id": "https://apexwebsitesolutions.in/services/social-media-marketing#faq",
     "mainEntity": faqs.map(faq => ({
       "@type": "Question",
       "name": faq.question,
@@ -336,104 +351,88 @@ const SocialMediaMarketingPage = () => {
   };
 
   return (
-    <HelmetProvider>
+    <>
       <Helmet>
-  {/* Primary Meta Tags */}
-  <title>Social Media Marketing Services | Instagram, Facebook & LinkedIn Marketing | Apex Website Solutions</title>
+        {/* Primary Meta Tags */}
+        <title>Social Media Marketing Services | SMM & Brand Growth | ApexWeb Solutions</title>
+        <meta name="title" content="Social Media Marketing Services | SMM & Brand Growth | ApexWeb Solutions" />
+        <meta
+          name="description"
+          content="Grow your business with professional social media marketing services from ApexWeb Solutions. We provide Instagram marketing, Facebook marketing, LinkedIn marketing, content creation, and paid social ads."
+        />
+        <meta
+          name="keywords"
+          content="social media marketing services, social media marketing agency, social media management, Instagram marketing services, Facebook marketing services, LinkedIn marketing services, social media advertising, content creation services, brand marketing, social media strategy, paid social media campaigns"
+        />
+        <meta name="author" content="ApexWeb Solutions" />
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="English" />
 
-  <meta
-    name="description"
-    content="Grow your business with professional social media marketing services from Apex Website Solutions. We provide Instagram marketing, Facebook marketing, LinkedIn marketing, social media management, content creation, and paid social media advertising."
-  />
+        {/* Canonical */}
+        <link
+          rel="canonical"
+          href="https://apexwebsitesolutions.in/services/social-media-marketing"
+        />
 
-  <meta
-    name="keywords"
-    content="social media marketing services, social media marketing agency, social media management, Instagram marketing services, Facebook marketing services, LinkedIn marketing services, social media advertising, content creation services, brand marketing, social media strategy, paid social media campaigns"
-  />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:url"
+          content="https://apexwebsitesolutions.in/services/social-media-marketing"
+        />
+        <meta
+          property="og:title"
+          content="Social Media Marketing Services | ApexWeb Solutions"
+        />
+        <meta
+          property="og:description"
+          content="Professional Instagram, Facebook, LinkedIn, and social media marketing services to help businesses increase brand awareness, engagement, and quality leads."
+        />
+        <meta
+          property="og:image"
+          content="https://apexwebsitesolutions.in/og-image.jpg"
+        />
+        <meta
+          property="og:site_name"
+          content="ApexWeb Solutions"
+        />
+        <meta property="og:locale" content="en_IN" />
 
-  <meta name="author" content="Apex Website Solutions" />
-  <meta name="robots" content="index, follow" />
-  <meta name="language" content="English" />
+        {/* Twitter */}
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+        />
+        <meta
+          name="twitter:url"
+          content="https://apexwebsitesolutions.in/services/social-media-marketing"
+        />
+        <meta
+          name="twitter:title"
+          content="Social Media Marketing Services | ApexWeb Solutions"
+        />
+        <meta
+          name="twitter:description"
+          content="Professional social media marketing services to grow your brand, engage customers, and drive conversions across all platforms."
+        />
+        <meta
+          name="twitter:image"
+          content="https://apexwebsitesolutions.in/og-image.jpg"
+        />
 
-  {/* Canonical */}
-  <link
-    rel="canonical"
-    href="https://apexwebsitesolutions.in/services/social-media-marketing"
-  />
-
-  {/* Open Graph */}
-  <meta property="og:type" content="website" />
-
-  <meta
-    property="og:url"
-    content="https://apexwebsitesolutions.in/services/social-media-marketing"
-  />
-
-  <meta
-    property="og:title"
-    content="Social Media Marketing Services | Apex Website Solutions"
-  />
-
-  <meta
-    property="og:description"
-    content="Professional Instagram, Facebook, LinkedIn, and social media marketing services to help businesses increase brand awareness, engagement, and quality leads."
-  />
-
-  <meta
-    property="og:image"
-    content="https://apexwebsitesolutions.in/og-social-media-marketing.jpg"
-  />
-
-  <meta
-    property="og:site_name"
-    content="Apex Website Solutions"
-  />
-
-  <meta property="og:locale" content="en_IN" />
-
-  {/* Twitter */}
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  />
-
-  <meta
-    name="twitter:url"
-    content="https://apexwebsitesolutions.in/services/social-media-marketing"
-  />
-
-  <meta
-    name="twitter:title"
-    content="Social Media Marketing Services | Apex Website Solutions"
-  />
-
-  <meta
-    name="twitter:description"
-    content="Professional social media marketing services including Instagram, Facebook, LinkedIn marketing, content creation, and paid social media campaigns."
-  />
-
-  <meta
-    name="twitter:image"
-    content="https://apexwebsitesolutions.in/twitter-social-media-marketing.jpg"
-  />
-
-  {/* Schema */}
-  <script type="application/ld+json">
-    {JSON.stringify(organizationSchema)}
-  </script>
-
-  <script type="application/ld+json">
-    {JSON.stringify(breadcrumbSchema)}
-  </script>
-
-  <script type="application/ld+json">
-    {JSON.stringify(servicesSchema)}
-  </script>
-
-  <script type="application/ld+json">
-    {JSON.stringify(faqSchema)}
-  </script>
-</Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(organizationSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+      </Helmet>
 
       <div className="min-h-screen bg-white pt-32 pb-24 overflow-hidden">
         {/* Hero Section */}
@@ -792,7 +791,7 @@ const SocialMediaMarketingPage = () => {
         .delay-1000 { animation-delay: 1s; }
         .hover\\:shadow-3xl:hover { box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.3); }
       `}</style>
-    </HelmetProvider>
+    </>
   );
 };
 

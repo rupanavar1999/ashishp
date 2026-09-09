@@ -1,7 +1,6 @@
-// pages/PerformanceMarketingPage.jsx
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
 const PerformanceMarketingPage = () => {
   const [activePlatform, setActivePlatform] = useState('google');
@@ -147,16 +146,18 @@ const PerformanceMarketingPage = () => {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://apexwebsitesolutions.in/#organization",
     "name": "ApexWeb Solutions",
     "url": "https://apexwebsitesolutions.in/",
     "logo": "https://apexwebsitesolutions.in/logo.png",
     "sameAs": ["https://linkedin.com/company/apexweb", "https://twitter.com/apexweb", "https://facebook.com/apexweb"],
-    "contactPoint": { "@type": "ContactPoint", "telephone": "+91- 98906-85066", "contactType": "customer service", "availableLanguage": ["English", "Hindi"] }
+    "contactPoint": { "@type": "ContactPoint", "telephone": "+91-98906-85066", "contactType": "customer service", "availableLanguage": ["English", "Hindi"] }
   };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id": "https://apexwebsitesolutions.in/services/performance-marketing#breadcrumb",
     "itemListElement": [
       { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apexwebsitesolutions.in/" },
       { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://apexwebsitesolutions.in/services" },
@@ -167,15 +168,18 @@ const PerformanceMarketingPage = () => {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    "@id": "https://apexwebsitesolutions.in/services/performance-marketing#faq",
     "mainEntity": faqs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
   };
 
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": "https://apexwebsitesolutions.in/services/performance-marketing#service",
     "name": "Performance Marketing Services",
+    "serviceType": "PPC & Paid Advertising",
     "description": "Professional performance marketing services including Google Ads, Meta Ads, and LinkedIn Ads management.",
-    "provider": { "@type": "Organization", "name": "ApexWeb Solutions" },
+    "provider": { "@id": "https://apexwebsitesolutions.in/#organization" },
     "areaServed": "India",
     "priceRange": "₹30,000 - ₹99,000"
   };
@@ -185,82 +189,81 @@ const PerformanceMarketingPage = () => {
   const estimatedRevenue = budget * 4.5;
 
   return (
-    <HelmetProvider>
-     <Helmet>
-  <title>Performance Marketing Services | Google Ads & Meta Ads Management | Apex Website Solutions</title>
+    <>
+      <Helmet>
+        <title>Performance Marketing Services | Google Ads & Meta Ads | ApexWeb Solutions</title>
+        <meta name="title" content="Performance Marketing Services | Google Ads & Meta Ads | ApexWeb Solutions" />
+        <meta
+          name="description"
+          content="Grow your business with performance marketing services from ApexWeb Solutions. We manage Google Ads, Meta Ads, LinkedIn Ads, and PPC campaigns to generate quality leads and maximize your marketing ROI."
+        />
+        <meta
+          name="keywords"
+          content="performance marketing services, performance marketing agency, Google Ads management, Meta Ads management, Facebook Ads services, Instagram Ads services, LinkedIn Ads management, PPC management, paid advertising services, lead generation services, digital advertising agency"
+        />
+        <meta name="author" content="ApexWeb Solutions" />
+        <meta name="robots" content="index, follow" />
+        <link
+          rel="canonical"
+          href="https://apexwebsitesolutions.in/services/performance-marketing"
+        />
 
-  <meta
-    name="description"
-    content="Grow your business with performance marketing services from Apex Website Solutions. We manage Google Ads, Meta Ads, LinkedIn Ads, and PPC campaigns to generate quality leads and maximize your marketing ROI."
-  />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="Performance Marketing Services | Google Ads & Meta Ads | ApexWeb Solutions"
+        />
+        <meta
+          property="og:description"
+          content="Professional performance marketing services including Google Ads, Meta Ads, LinkedIn Ads, and PPC campaign management to help businesses generate more leads."
+        />
+        <meta
+          property="og:url"
+          content="https://apexwebsitesolutions.in/services/performance-marketing"
+        />
+        <meta property="og:image" content="https://apexwebsitesolutions.in/og-image.jpg" />
+        <meta
+          property="og:site_name"
+          content="ApexWeb Solutions"
+        />
+        <meta property="og:locale" content="en_IN" />
 
-  <meta
-    name="keywords"
-    content="performance marketing services, performance marketing agency, Google Ads management, Meta Ads management, Facebook Ads services, Instagram Ads services, LinkedIn Ads management, PPC management, paid advertising services, lead generation services, digital advertising agency"
-  />
+        {/* Twitter */}
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+        />
+        <meta
+          name="twitter:url"
+          content="https://apexwebsitesolutions.in/services/performance-marketing"
+        />
+        <meta
+          name="twitter:title"
+          content="Performance Marketing Services | ApexWeb Solutions"
+        />
+        <meta
+          name="twitter:description"
+          content="Google Ads, Meta Ads, LinkedIn Ads, and PPC management services to grow your business and generate quality leads."
+        />
+        <meta
+          name="twitter:image"
+          content="https://apexwebsitesolutions.in/og-image.jpg"
+        />
 
-  <meta name="robots" content="index, follow" />
-
-  <link
-    rel="canonical"
-    href="https://apexwebsitesolutions.in/services/performance-marketing"
-  />
-
-  {/* Open Graph */}
-  <meta
-    property="og:title"
-    content="Performance Marketing Services | Google Ads & Meta Ads | Apex Website Solutions"
-  />
-
-  <meta
-    property="og:description"
-    content="Professional performance marketing services including Google Ads, Meta Ads, LinkedIn Ads, and PPC campaign management to help businesses generate more leads."
-  />
-
-  <meta
-    property="og:url"
-    content="https://apexwebsitesolutions.in/services/performance-marketing"
-  />
-
-  <meta property="og:type" content="website" />
-
-  <meta
-    property="og:site_name"
-    content="Apex Website Solutions"
-  />
-
-  {/* Twitter */}
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  />
-
-  <meta
-    name="twitter:title"
-    content="Performance Marketing Services | Apex Website Solutions"
-  />
-
-  <meta
-    name="twitter:description"
-    content="Google Ads, Meta Ads, LinkedIn Ads, and PPC management services to grow your business and generate quality leads."
-  />
-
-  <script type="application/ld+json">
-    {JSON.stringify(organizationSchema)}
-  </script>
-
-  <script type="application/ld+json">
-    {JSON.stringify(breadcrumbSchema)}
-  </script>
-
-  <script type="application/ld+json">
-    {JSON.stringify(faqSchema)}
-  </script>
-
-  <script type="application/ld+json">
-    {JSON.stringify(serviceSchema)}
-  </script>
-</Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(organizationSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+      </Helmet>
 
       <div className="min-h-screen bg-white pt-32 pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -474,7 +477,7 @@ const PerformanceMarketingPage = () => {
           </section>
         </div>
       </div>
-    </HelmetProvider>
+    </>
   );
 };
 

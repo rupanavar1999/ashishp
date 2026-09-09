@@ -1,7 +1,6 @@
-// pages/LandingPageDesignPage.jsx
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 
 const LandingPageDesignPage = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -128,116 +127,120 @@ const LandingPageDesignPage = () => {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://apexwebsitesolutions.in/#organization",
     "name": "ApexWeb Solutions",
-    "url": " ",
-    "logo": " /logo.png",
+    "url": "https://apexwebsitesolutions.in/",
+    "logo": "https://apexwebsitesolutions.in/logo.png",
     "sameAs": ["https://linkedin.com/company/apexweb", "https://twitter.com/apexweb", "https://facebook.com/apexweb"],
-    "contactPoint": { "@type": "ContactPoint", "telephone": "+91- 98906-85066", "contactType": "customer service", "availableLanguage": ["English", "Hindi"] }
+    "contactPoint": { "@type": "ContactPoint", "telephone": "+91-98906-85066", "contactType": "customer service", "availableLanguage": ["English", "Hindi"] }
   };
 
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
+    "@id": "https://apexwebsitesolutions.in/services/landing-page-design#breadcrumb",
     "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": " " },
-      { "@type": "ListItem", "position": 2, "name": "Services", "item": " /services" },
-      { "@type": "ListItem", "position": 3, "name": "Landing Page Design", "item": " /landing-page-design" }
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://apexwebsitesolutions.in/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://apexwebsitesolutions.in/services" },
+      { "@type": "ListItem", "position": 3, "name": "Landing Page Design", "item": "https://apexwebsitesolutions.in/services/landing-page-design" }
     ]
   };
 
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
+    "@id": "https://apexwebsitesolutions.in/services/landing-page-design#faq",
     "mainEntity": faqs.map(faq => ({ "@type": "Question", "name": faq.question, "acceptedAnswer": { "@type": "Answer", "text": faq.answer } }))
   };
 
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": "https://apexwebsitesolutions.in/services/landing-page-design#service",
     "name": "Landing Page Design Services",
+    "serviceType": "Landing Page Design & CRO",
     "description": "Professional landing page design services that convert visitors into customers. High-converting, mobile-responsive pages.",
-    "provider": { "@type": "Organization", "name": "ApexWeb Solutions" },
+    "provider": { "@type": "Organization", "@id": "https://apexwebsitesolutions.in/#organization" },
     "areaServed": "India",
     "priceRange": "₹6,000 - ₹35,000"
   };
 
   return (
-    <HelmetProvider>
-     <Helmet>
-  <title>Landing Page Design Services | High-Converting Landing Pages | Apex Website Solutions</title>
+    <>
+      <Helmet>
+        <title>High-Converting Landing Page Design Services | ApexWeb Solutions</title>
+        <meta name="title" content="High-Converting Landing Page Design Services | ApexWeb Solutions" />
+        <meta
+          name="description"
+          content="Get professional landing page design services from ApexWeb Solutions. We create fast, responsive, SEO-friendly, and high-converting landing pages for lead generation and businesses."
+        />
+        <meta
+          name="keywords"
+          content="landing page design services, landing page designer, landing page development, high converting landing pages, responsive landing page design, lead generation landing pages, business landing pages, custom landing page design, SEO landing pages, landing page developer"
+        />
+        <meta name="author" content="ApexWeb Solutions" />
+        <meta name="robots" content="index, follow" />
+        <link
+          rel="canonical"
+          href="https://apexwebsitesolutions.in/services/landing-page-design"
+        />
 
-  <meta
-    name="description"
-    content="Get professional landing page design services from Apex Website Solutions. We create fast, responsive, SEO-friendly, and high-converting landing pages for lead generation, products, startups, and businesses."
-  />
+        {/* Open Graph */}
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:title"
+          content="High-Converting Landing Page Design Services | ApexWeb Solutions"
+        />
+        <meta
+          property="og:description"
+          content="Professional landing page design services for businesses, startups, and marketing campaigns. Fast, responsive, SEO-friendly, and conversion-focused landing pages."
+        />
+        <meta
+          property="og:url"
+          content="https://apexwebsitesolutions.in/services/landing-page-design"
+        />
+        <meta property="og:image" content="https://apexwebsitesolutions.in/og-image.jpg" />
+        <meta
+          property="og:site_name"
+          content="ApexWeb Solutions"
+        />
+        <meta property="og:locale" content="en_IN" />
 
-  <meta
-    name="keywords"
-    content="landing page design services, landing page designer, landing page development, high converting landing pages, responsive landing page design, lead generation landing pages, business landing pages, custom landing page design, SEO landing pages, landing page developer"
-  />
+        {/* Twitter */}
+        <meta
+          name="twitter:card"
+          content="summary_large_image"
+        />
+        <meta
+          name="twitter:url"
+          content="https://apexwebsitesolutions.in/services/landing-page-design"
+        />
+        <meta
+          name="twitter:title"
+          content="High-Converting Landing Page Design Services | ApexWeb Solutions"
+        />
+        <meta
+          name="twitter:description"
+          content="Professional landing page design services for lead generation, marketing campaigns, and business growth."
+        />
+        <meta
+          name="twitter:image"
+          content="https://apexwebsitesolutions.in/og-image.jpg"
+        />
 
-  <meta name="robots" content="index, follow" />
-
-  <link
-    rel="canonical"
-    href="https://apexwebsitesolutions.in/services/landing-page-design"
-  />
-
-  {/* Open Graph */}
-  <meta
-    property="og:title"
-    content="Landing Page Design Services | Apex Website Solutions"
-  />
-
-  <meta
-    property="og:description"
-    content="Professional landing page design services for businesses, startups, and marketing campaigns. Fast, responsive, SEO-friendly, and conversion-focused landing pages."
-  />
-
-  <meta
-    property="og:url"
-    content="https://apexwebsitesolutions.in/services/landing-page-design"
-  />
-
-  <meta property="og:type" content="website" />
-
-  <meta
-    property="og:site_name"
-    content="Apex Website Solutions"
-  />
-
-  {/* Twitter */}
-  <meta
-    name="twitter:card"
-    content="summary_large_image"
-  />
-
-  <meta
-    name="twitter:title"
-    content="Landing Page Design Services | Apex Website Solutions"
-  />
-
-  <meta
-    name="twitter:description"
-    content="Professional landing page design services for lead generation, marketing campaigns, and business growth."
-  />
-
-  <script type="application/ld+json">
-    {JSON.stringify(organizationSchema)}
-  </script>
-
-  <script type="application/ld+json">
-    {JSON.stringify(breadcrumbSchema)}
-  </script>
-
-  <script type="application/ld+json">
-    {JSON.stringify(faqSchema)}
-  </script>
-
-  <script type="application/ld+json">
-    {JSON.stringify(serviceSchema)}
-  </script>
-</Helmet>
+        <script type="application/ld+json">
+          {JSON.stringify(organizationSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(serviceSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+        <script type="application/ld+json">
+          {JSON.stringify(faqSchema)}
+        </script>
+      </Helmet>
 
       <div className="min-h-screen bg-white pt-32 pb-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -419,7 +422,7 @@ const LandingPageDesignPage = () => {
           </section>
         </div>
       </div>
-    </HelmetProvider>
+    </>
   );
 };
 

@@ -13,23 +13,22 @@ const Layout = ({ children }) => {
 
   return (
     <div className="bg-white" style={{ backgroundColor: 'white' }}>
-      {loading ? (
+      {loading && (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center"
+          className="fixed inset-0 z-50 flex items-center justify-center transition-opacity duration-500"
           style={{ backgroundColor: '#0F172A' }}
         >
           <div className="text-center">
-            <h1 className="text-4xl font-light tracking-wider text-white mb-4">APEXWEB</h1>
+            <div className="text-4xl font-light tracking-wider text-white mb-4" role="status" aria-label="ApexWeb Solutions">
+              APEXWEB
+            </div>
             <div className="w-12 h-12 border-2 border-white border-t-transparent rounded-full animate-spin mx-auto" />
           </div>
         </div>
-      ) : (
-        <>
-          <Navigation />
-          <main>{children}</main>
-          <Footer />
-        </>
       )}
+      <Navigation />
+      <main id="main-content">{children}</main>
+      <Footer />
     </div>
   );
 };

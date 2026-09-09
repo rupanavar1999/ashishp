@@ -1,6 +1,6 @@
 // pages/HomePage.jsx
 import React, { useEffect, useRef, useState } from 'react';
-import { Helmet, HelmetProvider } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import HeroSection from '../components/HeroSection';
 import AgencyStory from '../components/AgencyStory';
 import ServicesOverview from '../components/ServicesOverview';
@@ -50,9 +50,11 @@ const HomePage = () => {
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
+    "@id": "https://apexwebsitesolutions.in/#organization",
     "name": "ApexWeb Solutions",
-    "url": " ",
-    "logo": " /logo.png",
+    "url": "https://apexwebsitesolutions.in/",
+    "logo": "https://apexwebsitesolutions.in/logo.png",
+    "image": "https://apexwebsitesolutions.in/og-image.jpg",
     "description": "Premium digital agency offering web development, SEO, and digital marketing services in India.",
     "sameAs": [
       "https://linkedin.com/company/apexweb",
@@ -62,7 +64,7 @@ const HomePage = () => {
     ],
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "+91- 98906-85066",
+      "telephone": "+91-98906-85066",
       "contactType": "customer service",
       "availableLanguage": ["English", "Hindi"],
       "areaServed": "India"
@@ -72,20 +74,22 @@ const HomePage = () => {
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
+    "@id": "https://apexwebsitesolutions.in/#website",
     "name": "ApexWeb Solutions",
-    "url": " ",
-    "description": "Premium digital agency providing web development, SEO services, and digital marketing solutions.",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": " /search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
+    "url": "https://apexwebsitesolutions.in/",
+    "publisher": {
+      "@id": "https://apexwebsitesolutions.in/#organization"
+    },
+    "description": "Premium digital agency providing web development, SEO services, and digital marketing solutions."
   };
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
+    "@id": "https://apexwebsitesolutions.in/#localservice",
     "name": "ApexWeb Solutions - Digital Agency",
+    "url": "https://apexwebsitesolutions.in/",
+    "image": "https://apexwebsitesolutions.in/og-image.jpg",
     "description": "Premium digital agency providing web development, SEO services, and digital marketing solutions in India.",
     "address": {
       "@type": "PostalAddress",
@@ -94,29 +98,16 @@ const HomePage = () => {
       "addressCountry": "IN"
     },
     "priceRange": "₹15,000 - ₹1,00,000",
-    "telephone": "+91- 98906-85066",
-    "openingHours": "Mo-Fr 09:00-19:00",
-    "openingHoursSpecification": [
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-        "opens": "09:00",
-        "closes": "19:00"
-      },
-      {
-        "@type": "OpeningHoursSpecification",
-        "dayOfWeek": "Saturday",
-        "opens": "10:00",
-        "closes": "16:00"
-      }
-    ]
+    "telephone": "+91-98906-85066",
+    "openingHours": "Mo-Fr 09:00-19:00, Sa 10:00-16:00"
   };
 
   return (
-    <HelmetProvider>
+    <>
       <Helmet>
         {/* Primary Meta Tags */}
-        <title>ApexWeb Solutions | #1 Digital Agency in India | Web Development, SEO, Marketing</title>
+        <title>ApexWeb Solutions | Premium Digital Agency | Web Development & SEO India</title>
+        <meta name="title" content="ApexWeb Solutions | Premium Digital Agency | Web Development & SEO India" />
         <meta name="description" content="India's leading digital agency offering website development, SEO services, and digital marketing. 500+ websites delivered, 98% client satisfaction. Free consultation!" />
         <meta name="keywords" content="digital agency, web development company, website design services, SEO services, digital marketing agency, Google Ads services, social media marketing, WordPress development, Shopify development, UI UX design, ecommerce website development, local SEO services, performance marketing, lead generation, online marketing agency" />
         <meta name="author" content="ApexWeb Solutions" />
@@ -129,19 +120,19 @@ const HomePage = () => {
         
         {/* Open Graph / Facebook */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content=" " />
-        <meta property="og:title" content="ApexWeb Solutions - #1 Digital Agency in India" />
+        <meta property="og:url" content="https://apexwebsitesolutions.in/" />
+        <meta property="og:title" content="ApexWeb Solutions | Premium Digital Agency | Web Development & SEO India" />
         <meta property="og:description" content="Get a stunning website, rank higher on Google, and grow your business with our expert digital solutions. Free consultation available!" />
-        <meta property="og:image" content=" /og-image-home.jpg" />
+        <meta property="og:image" content="https://apexwebsitesolutions.in/og-image.jpg" />
         <meta property="og:site_name" content="ApexWeb Solutions" />
         <meta property="og:locale" content="en_IN" />
         
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:url" content=" " />
-        <meta name="twitter:title" content="ApexWeb Solutions - #1 Digital Agency in India" />
+        <meta name="twitter:url" content="https://apexwebsitesolutions.in/" />
+        <meta name="twitter:title" content="ApexWeb Solutions | Premium Digital Agency | Web Development & SEO India" />
         <meta name="twitter:description" content="Premium digital solutions for business growth. Get your free consultation today!" />
-        <meta name="twitter:image" content=" /twitter-image-home.jpg" />
+        <meta name="twitter:image" content="https://apexwebsitesolutions.in/og-image.jpg" />
         
         {/* Additional SEO Meta Tags */}
         <meta name="geo.region" content="IN-GA" />
@@ -159,25 +150,26 @@ const HomePage = () => {
         {/* Progress indicator */}
         <div className="fixed right-8 top-1/2 transform -translate-y-1/2 z-50 hidden lg:block">
           <div className="flex flex-col gap-3">
-            {sections.map((section, idx) => (
-              <button
-                key={section.id}
-                className="progress-dot"
-                style={{
-                  backgroundColor: activeSection === idx ? '#38BDF8' : '#E2E8F0',
-                  width: activeSection === idx ? '32px' : '8px',
-                  height: '8px',
-                  borderRadius: '4px',
-                }}
-                onClick={() => {
-                  sectionsRef.current[idx]?.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start',
-                  });
-                }}
-                aria-label={`Go to ${section.id} section`}
-              />
-            ))}
+           {sections.map((section, idx) => (
+  <button
+    key={section.id}
+    className="progress-dot"
+    style={{
+      backgroundColor:
+        activeSection === idx ? '#38BDF8' : '#E2E8F0',
+      width: activeSection === idx ? '32px' : '8px',
+      height: '8px',
+      borderRadius: '4px',
+    }}
+    onClick={() => {
+      sectionsRef.current[idx]?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }}
+    aria-label={`Go to ${section.id} section`}
+  />
+))}
           </div>
         </div>
 
@@ -241,7 +233,7 @@ const HomePage = () => {
           }
         `}</style>
       </div>
-    </HelmetProvider>
+    </>
   );
 };
 

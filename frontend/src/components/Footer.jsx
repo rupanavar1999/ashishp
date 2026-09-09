@@ -220,13 +220,13 @@ const Footer = () => {
               <div className="flex items-center gap-2">
                 <span className="text-sm">📧</span>
                 <a 
-                  href="mailto:hello@apexweb.com"
+                  href="mailto:ashishwebmakesite@gmail.com"
                   className="text-sm transition-colors duration-300"
                   style={{ color: '#4A5568' }}
                   onMouseEnter={(e) => e.currentTarget.style.color = '#38BDF8'}
                   onMouseLeave={(e) => e.currentTarget.style.color = '#4A5568'}
                 >
-                  hello@apexweb.com
+                  ashishwebmakesite@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-2">
