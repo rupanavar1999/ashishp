@@ -1,11 +1,17 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { useParams } from "react-router-dom";
+import { webPagesData } from "../data/webPagesData";
 
 const WebsiteDevelopmentPage = () => {
   const [isVisible, setIsVisible] = useState(false);
   const headerRef = useRef(null);
+  
+    const { slug } = useParams();
+    const page = webPagesData[slug];
 
+  
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -310,6 +316,31 @@ const WebsiteDevelopmentPage = () => {
               </div>
             </div>
           </div>
+
+          {/* Website Keywords Section */}
+         <div className="mt-20">
+                     <h2
+                       className="text-2xl md:text-3xl font-bold text-center mb-10"
+                       style={{ color: '#0F172A' }}
+                     >
+                       Website{" "}
+                       <span style={{ color: '#38BDF8' }}>Keywords</span>
+                     </h2>
+                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                       {Object.keys(webPagesData).map((key) => (
+                         <div key={key}>
+                           <Link
+                             to={`/website/${key}`}
+                             className="block p-4 rounded-lg transition-all duration-300 hover:underline"
+                             style={{ color: '#38BDF8' }}
+                           >
+                             {webPagesData[key].h1}
+                           </Link>
+                         </div>
+                       ))}
+                     </div>
+                   </div>
+
         </div>
       </div>
     </>

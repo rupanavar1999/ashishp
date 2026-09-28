@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
+import { useParams } from "react-router-dom";
+import { seoPages } from "../data/seoPages";
 
 const SEOPage = () => {
   const [statsInView, setStatsInView] = useState(false);
@@ -8,6 +10,10 @@ const SEOPage = () => {
   const statsRef = useRef(null);
   const heroRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+
+  const { slug } = useParams();
+  const page = seoPages[slug];
+
 
   useEffect(() => {
     const heroObserver = new IntersectionObserver(
@@ -379,6 +385,29 @@ const SEOPage = () => {
               </div>
             </div>
           </section>
+
+          <div className="mt-20">
+            <h2
+              className="text-2xl md:text-3xl font-bold text-center mb-10"
+              style={{ color: '#0F172A' }}
+            >
+              SEO{" "}
+              <span style={{ color: '#38BDF8' }}>Keywords</span>
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {Object.keys(seoPages).map((key) => (
+                <div key={key}>
+                  <Link
+                    to={`/seo/${key}`}
+                    className="block p-4 rounded-lg transition-all duration-300 hover:underline"
+                    style={{ color: '#38BDF8' }}
+                  >
+                    {seoPages[key].h1}
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </>

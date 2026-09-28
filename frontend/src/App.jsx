@@ -20,6 +20,8 @@ import QuotationList from './components/QuotationList.jsx';
 import AboutUsPage from './pages/About.jsx';
 import NotFound from './pages/NotFound';
 import ThankYou from './pages/ThnakYou.jsx';
+import SEONewPages from './pages/SEONewPages.jsx';
+import WebsiteNewPages from './pages/WebsiteNewPages.jsx';
 
 function App() {
   return (
@@ -44,6 +46,11 @@ function App() {
           <Route path="/services/landing-page-design" element={<LandingPage />} />
           <Route path="/services/website-maintenance" element={<MaintenancePage />} />  
           
+          {/* Dynamic SEO pages - LAST */}
+          <Route path="/seo/:slug" element={<SEONewPages />} />
+          <Route path="/website/:slug" element={<WebsiteNewPages />} />
+          
+
           {/* Quotation Routes */}
           <Route path="/quotation" element={<QuotationForm />} />
           <Route path="/quotations" element={<QuotationList />} />
