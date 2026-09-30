@@ -1,9 +1,5 @@
 export const webPagesData = {
 
-  // ==========================================
-  // NAVI MUMBAI - HIGH PRIORITY LOCATIONS
-  // ==========================================
-
   "website-development-company-in-vashi": {
     h1: "Website Development Company in Vashi",
     metaTitle: "Website Development Company in Vashi | ApexWeb",
@@ -528,7 +524,7 @@ maharashtraWebsiteLocations.forEach((location) => {
         `Website Development Company in ${location} | ApexWeb`,
 
       canonical:
-        `https://www.apexweb.in/website/${key}`,
+        `https://apexwebsitesolutions.in/website/${key}`,
 
       description:
         `Professional website development company in ${location} offering modern, responsive, SEO-friendly and high-performance websites for businesses, startups, professionals and companies.`,

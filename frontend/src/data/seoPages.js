@@ -436,7 +436,7 @@ maharashtraLocations.forEach((location) => {
     metaTitle: `SEO Freelancer in ${location} | ApexWeb`,
 
     canonical:
-      `https://www.apexweb.in/seo/seo-freelancer-in-${slugLocation}`,
+      `https://apexwebsitesolutions.in/seo/seo-freelancer-in-${slugLocation}`,
 
     description:
       `Professional SEO freelancer in ${location} offering local SEO, technical SEO, on-page SEO, off-page SEO and website optimization services to improve Google rankings and organic traffic.`,
