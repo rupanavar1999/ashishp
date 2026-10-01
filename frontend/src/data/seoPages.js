@@ -420,7 +420,127 @@ const maharashtraLocations = [
   "Satara",
   "Solapur",
   "Ratnagiri",
-  "Sindhudurg"
+  "Sindhudurg",
+  
+  // -----------------------------
+  // KONKAN
+  // -----------------------------
+
+  "Dombivli",
+  "Mira Road",
+  "Bhayandar",
+  "Vasai",
+  "Virar",
+  "Palghar",
+  "Panvel",
+  "Alibag",
+  "Karjat",
+  "Khopoli",
+  "Pen",
+  "Ratnagiri",
+  "Chiplun",
+  "Rajapur",
+  "Sawantwadi",
+  "Malvan",
+  "Kudal",
+
+  // -----------------------------
+  // PUNE
+  // -----------------------------
+
+  "Pune",
+  "Pimpri Chinchwad",
+  "Baramati",
+  "Lonavala",
+  "Talegaon",
+  "Shirur",
+  "Daund",
+  "Bhor",
+  "Satara",
+  "Karad",
+  "Phaltan",
+  "Wai",
+  "Kolhapur",
+  "Ichalkaranji",
+  "Sangli",
+  "Miraj",
+  "Islampur",
+  "Solapur",
+  "Pandharpur",
+  "Akluj",
+
+  // -----------------------------
+  // NASHIK
+  // -----------------------------
+
+  "Nashik",
+  "Malegaon",
+  "Sinnar",
+  "Igatpuri",
+  "Niphad",
+  "Dhule",
+  "Shirpur",
+  "Nandurbar",
+  "Shahada",
+  "Jalgaon",
+  "Bhusawal",
+  "Chalisgaon",
+  "Pachora",
+  "Amalner",
+  "Ahilyanagar",
+  "Sangamner",
+  "Shirdi",
+  "Kopargaon",
+
+  // -----------------------------
+  // CHHATRAPATI SAMBHAJINAGAR
+  // -----------------------------
+
+  "Chhatrapati Sambhajinagar",
+  "Jalna",
+  "Beed",
+  "Latur",
+  "Nanded",
+  "Parbhani",
+  "Hingoli",
+  "Dharashiv",
+  "Udgir",
+  "Ambajogai",
+  "Georai",
+  "Deglur",
+
+  // -----------------------------
+  // AMRAVATI
+  // -----------------------------
+
+  "Amravati",
+  "Akola",
+  "Buldhana",
+  "Khamgaon",
+  "Shegaon",
+  "Washim",
+  "Yavatmal",
+  "Achalpur",
+  "Murtizapur",
+  "Akot",
+  "Daryapur",
+
+  // -----------------------------
+  // NAGPUR
+  // -----------------------------
+
+  "Nagpur",
+  "Wardha",
+  "Bhandara",
+  "Gondia",
+  "Chandrapur",
+  "Ballarpur",
+  "Gadchiroli",
+  "Umred",
+  "Katol",
+  "Kamptee",
+  "Ramtek",
+  "Hinganghat"
 ];
 
 export const seoPages = {};

@@ -4,7 +4,7 @@ export const webPagesData = {
     h1: "Website Development Company in Vashi",
     metaTitle: "Website Development Company in Vashi | ApexWeb",
     canonical:
-      "https://apexwebsitesolutions.inwebsite/website-development-company-in-vashi",
+      "https://apexwebsitesolutions.in/website/website-development-company-in-vashi",
     description:
       "Professional website development company in Vashi offering modern, responsive and SEO-friendly websites for businesses.",
     service: "Website Development",
@@ -22,7 +22,7 @@ export const webPagesData = {
     h1: "Website Development Company in Kharghar",
     metaTitle: "Website Development Company in Kharghar | ApexWeb",
     canonical:
-      "https://apexwebsitesolutions.inwebsite/website-development-company-in-kharghar",
+      "https://apexwebsitesolutions.in/website/website-development-company-in-kharghar",
     description:
       "Professional website development company in Kharghar providing responsive, modern and SEO-friendly business websites.",
     service: "Website Development",
@@ -40,7 +40,7 @@ export const webPagesData = {
     h1: "Website Development Company in Nerul",
     metaTitle: "Website Development Company in Nerul | ApexWeb",
     canonical:
-      "https://apexwebsitesolutions.inwebsite/website-development-company-in-nerul",
+      "https://apexwebsitesolutions.in/website/website-development-company-in-nerul",
     description:
       "Get professional website development services in Nerul for business, corporate and custom websites.",
     service: "Website Development",
@@ -58,7 +58,7 @@ export const webPagesData = {
     h1: "Website Development Company in CBD Belapur",
     metaTitle: "Website Development Company in Belapur | ApexWeb",
     canonical:
-      "https://apexwebsitesolutions.inwebsite/website-development-company-in-belapur",
+      "https://apexwebsitesolutions.in/website/website-development-company-in-belapur",
     description:
       "Professional website development services in CBD Belapur for businesses, startups and corporate companies.",
     service: "Website Development",
@@ -76,7 +76,7 @@ export const webPagesData = {
     h1: "Website Development Company in Seawoods",
     metaTitle: "Website Development Company in Seawoods | ApexWeb",
     canonical:
-      "https://apexwebsitesolutions.inwebsite/website-development-company-in-seawoods",
+      "https://apexwebsitesolutions.in/website/website-development-company-in-seawoods",
     description:
       "Professional website development company in Seawoods creating responsive, modern and SEO-friendly business websites.",
     service: "Website Development",
@@ -94,7 +94,7 @@ export const webPagesData = {
     h1: "Website Development Company in Sanpada",
     metaTitle: "Website Development Company in Sanpada | ApexWeb",
     canonical:
-      "https://apexwebsitesolutions.inwebsite/website-development-company-in-sanpada",
+      "https://apexwebsitesolutions.in/website/website-development-company-in-sanpada",
     description:
       "Professional website development services in Sanpada for businesses looking for modern and SEO-friendly websites.",
     service: "Website Development",
@@ -112,7 +112,7 @@ export const webPagesData = {
     h1: "Website Development Company in Ghansoli",
     metaTitle: "Website Development Company in Ghansoli | ApexWeb",
     canonical:
-      "https://apexwebsitesolutions.inwebsite/website-development-company-in-ghansoli",
+      "https://apexwebsitesolutions.in/website/website-development-company-in-ghansoli",
     description:
       "Professional website development company in Ghansoli offering responsive and SEO-friendly websites for local businesses.",
     service: "Website Development",
@@ -130,7 +130,7 @@ export const webPagesData = {
     h1: "Website Development Company in Airoli",
     metaTitle: "Website Development Company in Airoli | ApexWeb",
     canonical:
-      "https://apexwebsitesolutions.inwebsite/website-development-company-in-airoli",
+      "https://apexwebsitesolutions.in/website/website-development-company-in-airoli",
     description:
       "Professional website development services in Airoli for businesses, startups and professional service providers.",
     service: "Website Development",
@@ -149,7 +149,7 @@ export const webPagesData = {
     metaTitle:
       "Website Development Company in Kopar Khairane | ApexWeb",
     canonical:
-      "https://apexwebsitesolutions.inwebsite/website-development-company-in-kopar-khairane",
+      "https://apexwebsitesolutions.in/website/website-development-company-in-kopar-khairane",
     description:
       "Professional website development company in Kopar Khairane offering modern and SEO-friendly websites for businesses.",
     service: "Website Development",
@@ -167,7 +167,7 @@ export const webPagesData = {
     h1: "Website Development Company in Panvel",
     metaTitle: "Website Development Company in Panvel | ApexWeb",
     canonical:
-      "https://apexwebsitesolutions.inwebsite/website-development-company-in-panvel",
+      "https://apexwebsitesolutions.in/website/website-development-company-in-panvel",
     description:
       "Professional website development services in Panvel for small businesses, companies, startups and professionals.",
     service: "Website Development",
@@ -190,7 +190,7 @@ export const webPagesData = {
     h1: "Website Development Company in Andheri",
     metaTitle: "Website Development Company in Andheri | ApexWeb",
     canonical:
-      "https://apexwebsitesolutions.inwebsite/website-development-company-in-andheri",
+      "https://apexwebsitesolutions.in/website/website-development-company-in-andheri",
     description:
       "Professional website development company in Andheri providing modern, responsive and SEO-friendly business websites.",
     service: "Website Development",
@@ -208,7 +208,7 @@ export const webPagesData = {
     h1: "Website Development Company in Bandra",
     metaTitle: "Website Development Company in Bandra | ApexWeb",
     canonical:
-      "https://apexwebsitesolutions.inwebsite/website-development-company-in-bandra",
+      "https://apexwebsitesolutions.in/website/website-development-company-in-bandra",
     description:
       "Professional website development services in Bandra for businesses, startups and professional service providers.",
     service: "Website Development",
@@ -226,7 +226,7 @@ export const webPagesData = {
     h1: "Website Development Company in BKC",
     metaTitle: "Website Development Company in BKC Mumbai | ApexWeb",
     canonical:
-      "https://apexwebsitesolutions.inwebsite/website-development-company-in-bkc",
+      "https://apexwebsitesolutions.in/website/website-development-company-in-bkc",
     description:
       "Professional website development services in BKC Mumbai for companies, startups and corporate businesses.",
     service: "Website Development",
@@ -244,7 +244,7 @@ export const webPagesData = {
     h1: "Website Development Company in Powai",
     metaTitle: "Website Development Company in Powai | ApexWeb",
     canonical:
-      "https://apexwebsitesolutions.inwebsite/website-development-company-in-powai",
+      "https://apexwebsitesolutions.in/website/website-development-company-in-powai",
     description:
       "Professional website development company in Powai creating modern, responsive and SEO-friendly websites.",
     service: "Website Development",
@@ -262,7 +262,7 @@ export const webPagesData = {
     h1: "Website Development Company in Goregaon",
     metaTitle: "Website Development Company in Goregaon | ApexWeb",
     canonical:
-      "https://apexwebsitesolutions.inwebsite/website-development-company-in-goregaon",
+      "https://apexwebsitesolutions.in/website/website-development-company-in-goregaon",
     description:
       "Professional website development services in Goregaon for local businesses and companies.",
     service: "Website Development",
@@ -280,7 +280,7 @@ export const webPagesData = {
     h1: "Website Development Company in Malad",
     metaTitle: "Website Development Company in Malad | ApexWeb",
     canonical:
-      "https://apexwebsitesolutions.inwebsite/website-development-company-in-malad",
+      "https://apexwebsitesolutions.in/website/website-development-company-in-malad",
     description:
       "Professional website development company in Malad offering responsive and SEO-friendly websites for businesses.",
     service: "Website Development",
@@ -298,7 +298,7 @@ export const webPagesData = {
     h1: "Website Development Company in Borivali",
     metaTitle: "Website Development Company in Borivali | ApexWeb",
     canonical:
-      "https://apexwebsitesolutions.inwebsite/website-development-company-in-borivali",
+      "https://apexwebsitesolutions.in/website/website-development-company-in-borivali",
     description:
       "Professional website development services in Borivali for businesses, professionals and startups.",
     service: "Website Development",
@@ -316,7 +316,7 @@ export const webPagesData = {
     h1: "Website Development Company in Ghatkopar",
     metaTitle: "Website Development Company in Ghatkopar | ApexWeb",
     canonical:
-      "https://apexwebsitesolutions.inwebsite/website-development-company-in-ghatkopar",
+      "https://apexwebsitesolutions.in/website/website-development-company-in-ghatkopar",
     description:
       "Professional website development company in Ghatkopar offering modern and SEO-friendly business websites.",
     service: "Website Development",
@@ -334,7 +334,7 @@ export const webPagesData = {
     h1: "Website Development Company in Chembur",
     metaTitle: "Website Development Company in Chembur | ApexWeb",
     canonical:
-      "https://apexwebsitesolutions.inwebsite/website-development-company-in-chembur",
+      "https://apexwebsitesolutions.in/website/website-development-company-in-chembur",
     description:
       "Professional website development services in Chembur for businesses and professional service providers.",
     service: "Website Development",
@@ -352,7 +352,7 @@ export const webPagesData = {
     h1: "Website Development Company in Mulund",
     metaTitle: "Website Development Company in Mulund | ApexWeb",
     canonical:
-      "https://apexwebsitesolutions.inwebsite/website-development-company-in-mulund",
+      "https://apexwebsitesolutions.in/website/website-development-company-in-mulund",
     description:
       "Professional website development company in Mulund providing responsive and SEO-friendly websites for businesses.",
     service: "Website Development",
